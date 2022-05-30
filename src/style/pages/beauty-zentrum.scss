@@ -1,0 +1,431 @@
+@use "../abstracts/variables.scss";
+@use "../abstracts/mixin.scss";
+
+#beauty-zentrum {
+  .wrapper {
+    background-image: url("img/desktop_thebeautyzentrum_background.svg");
+  }
+
+  .slide-0 {
+    background-image: url("img/desktop_thebeautyzentrum_intro.webp");
+
+    .container-h1 {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      width: inherit;
+
+      h1,
+      span {
+        transform: translate(-50%, -50%) !important;
+      }
+    }
+  }
+
+  .slide-1 {
+    .row:first-child {
+      margin-top: 26vh;
+      position: relative;
+
+      .col-4:first-of-type {
+        @include mixin.glow-layering(frame, secondary);
+      }
+
+      .glow-layer {
+        height: 101%;
+        margin-top: -1%;
+        position: absolute;
+        width: 33%;
+      }
+
+      .col-4:last-of-type {
+        margin-left: 10%;
+        padding-top: 12.5%;
+        z-index: 10;
+      }
+    }
+
+    .row:last-child {
+      margin-left: 2.5%;
+
+      h2,
+      span {
+        font-size: 3.875rem;
+        z-index: 11;
+      }
+    }
+
+    img,
+    picture,
+    source {
+      position: relative;
+      width: 100%;
+      z-index: 10;
+    }
+  }
+
+  .slide-2 {
+    .row:first-child {
+      height: 40vh;
+      margin-top: 10vh;
+
+      .col-6:first-child {
+        z-index: 0;
+      }
+
+      .col-6:last-child {
+        background: variables.$color-tertiary-icon-gamma;
+        margin-left: -5%;
+        padding: 2rem 15% 2rem 0;
+
+        .sheet-content {
+          margin-top: -2rem;
+          padding-top: 4rem;
+
+          &::before {
+            z-index: 2;
+          }
+
+          h2,
+          p,
+          span {
+            z-index: 3;
+          }
+        }
+      }
+    }
+
+    .row:last-child {
+      flex-wrap: nowrap;
+      height: 35vh;
+      margin-top: 8vh;
+
+      .col-9 {
+        background: variables.$color-tertiary-icon-gamma;
+        margin: 0 -10% 0 3%;
+        padding: 2rem 15% 2rem 10%;
+
+        .sheet-content {
+          margin-top: -2rem;
+          padding-top: 4rem;
+
+          &::before {
+            z-index: 2;
+          }
+
+          h2,
+          p,
+          span {
+            z-index: 3;
+          }
+        }
+      }
+
+      .col-4 {
+        margin-top: -20%;
+        padding-right: 5%;
+        z-index: 0;
+      }
+    }
+
+    img,
+    picture,
+    source {
+      height: 100%;
+    }
+  }
+
+  .slide-3 {
+    .container-xl {
+      .row:first-child {
+        margin-top: 33vh;
+
+        .col {
+          display: flex;
+          justify-content: center;
+
+          h2,
+          span {
+            transform: translate(-50%, -50%);
+          }
+
+          .container-h2 {
+            h2 {
+              z-index: 17;
+            }
+
+            .layer-0 {
+              z-index: 11;
+
+              &::before {
+                background-color: rgba(variables.$color-neutral-dark, 50%);
+                content: "";
+                filter: blur(2.5rem);
+                height: 110%;
+                position: absolute;
+                width: 110%;
+              }
+            }
+
+            .layer-1 {
+              z-index: 12;
+            }
+
+            .layer-2 {
+              z-index: 13;
+            }
+
+            .layer-3 {
+              z-index: 14;
+            }
+
+            .layer-4 {
+              z-index: 15;
+            }
+
+            .layer-5 {
+              z-index: 16;
+            }
+          }
+        }
+      }
+
+      .row:last-child {
+        @include mixin.glow-layering(frame, tertiary);
+
+        height: 40vh;
+        position: relative;
+
+        .glow-layer {
+          height: 100%;
+          position: absolute;
+          width: 100%;
+        }
+
+        .col-2 {
+          padding: 0 1rem;
+          text-align: center;
+          z-index: 11;
+        }
+
+        h4 {
+          margin-left: -50%;
+          width: 200%;
+        }
+
+        .container-stroke-neon {
+          margin-bottom: 3.5rem;
+
+          span {
+            font-size: 2.25rem;
+            transform: translateX(-50%);
+          }
+
+          .number {
+            z-index: 17;
+          }
+
+          .layer-0 {
+            z-index: 12;
+          }
+
+          .layer-1 {
+            z-index: 13;
+          }
+
+          .layer-3 {
+            z-index: 14;
+          }
+
+          .layer-4 {
+            z-index: 15;
+          }
+
+          .layer-5 {
+            z-index: 16;
+          }
+        }
+      }
+    }
+  }
+
+  .slide-4 {
+    .container-xl {
+      .row:first-child {
+        margin-top: 20vh;
+        .col {
+          display: flex;
+          justify-content: center;
+
+          .container-stroke-neon.number {
+            span {
+              font-size: 6rem;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          .container-h2 {
+            h2 {
+              z-index: 17;
+              transform: translate(-50%, 135%);
+            }
+
+            span {
+              transform: translate(-50%, 100%);
+            }
+          }
+
+          .layer-0 {
+            z-index: 11;
+
+            &::before {
+              background-color: rgba(variables.$color-neutral-dark, 50%);
+              content: "";
+              filter: blur(2.5rem);
+              height: 110%;
+              position: absolute;
+              width: 110%;
+            }
+          }
+
+          .layer-1 {
+            z-index: 12;
+          }
+
+          .layer-2 {
+            z-index: 13;
+          }
+
+          .layer-3 {
+            z-index: 14;
+          }
+
+          .layer-4 {
+            z-index: 15;
+          }
+
+          .layer-5 {
+            z-index: 16;
+          }
+        }
+      }
+
+      .row:last-child {
+        @include mixin.glow-layering(frame, secondary);
+
+        height: 62vh;
+        position: relative;
+
+        .glow-layer {
+          height: 100%;
+          position: absolute;
+          width: 80%;
+          transform: translateX(10%);
+        }
+
+        .col-4 {
+          margin-top: 5%;
+          z-index: 11;
+        }
+
+        .box {
+          background-color: variables.$color-tertiary-icon-gamma;
+          filter: drop-shadow(0.94rem 0.94rem 0.94rem rgba(#000, 30%));
+          margin: 0 10%;
+          padding: 3rem 4rem 1.5rem;
+          text-align: center;
+          width: 80%;
+          z-index: 12;
+
+          h4 {
+            margin-left: -10%;
+            width: 120%;
+          }
+        }
+      }
+    }
+  }
+
+  .slide-5 {
+    .row {
+      margin-top: 13vh;
+
+      .col-5:first-child {
+        .container-stroke-neon {
+          .number,
+          span {
+            font-size: 6rem;
+          }
+        }
+
+        .container-h2 {
+          margin-top: 5.75rem;
+        }
+
+        p {
+          margin-top: 7.5rem;
+        }
+
+        img,
+        picture,
+        source {
+          width: 90%;
+        }
+      }
+
+      .col-6 {
+        column-gap: 1rem;
+        display: grid;
+        grid-template-columns: [a] calc(50% - 0.5rem) [b] calc(50% - 0.5rem) [b];
+        grid-template-rows: [r1] calc(50% - 0.5rem) [r2] calc(50% - 0.5rem) [r3];
+        margin-top: 7.5rem;
+        padding-right: 5%;
+        row-gap: 1rem;
+
+        .box {
+          background-color: variables.$color-tertiary-icon-gamma;
+          display: flex;
+          filter: drop-shadow(0.94rem 0.94rem 0.94rem rgba(#000, 30%));
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 3rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .slide-6 {
+    .row {
+      margin-top: 21vh;
+
+      .col-4 {
+        .container-btn-neon {
+          .btn-neon,
+          span {
+            padding: 0 1.5rem;
+          }
+        }
+
+        .container-stroke-neon {
+          .number,
+          span {
+            font-size: 6rem;
+          }
+        }
+
+        .container-h2 {
+          margin-top: 5.75rem;
+        }
+
+        p {
+          margin-top: 7.5rem;
+        }
+      }
+
+      .col-6 {
+        margin-top: -7.5%;
+      }
+    }
+  }
+}
