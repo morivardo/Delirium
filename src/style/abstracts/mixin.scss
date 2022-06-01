@@ -1,5 +1,5 @@
-@use "variables.scss";
-@use "sass:map";
+@use 'variables.scss';
+@use 'sass:map';
 
 @mixin glow-layering($type, $hue) {
   @if $type == box {
@@ -222,28 +222,16 @@
 
     .layer-3 {
       @if $hue == primary {
-        filter: drop-shadow(
-            0 0.13rem 0.17rem variables.$color-primary-icon-gamma
-          )
-          drop-shadow(
-            0 0.06rem 0.04rem rgba(variables.$color-primary-icon-delta, 70%)
-          );
+        filter: drop-shadow(0 0.13rem 0.17rem variables.$color-primary-icon-gamma)
+          drop-shadow(0 0.06rem 0.04rem rgba(variables.$color-primary-icon-delta, 70%));
         stroke: rgba(variables.$color-primary-icon-beta, 20%);
       } @else if $hue == secondary {
-        filter: drop-shadow(
-            0 0.13rem 0.17rem variables.$color-secondary-icon-gamma
-          )
-          drop-shadow(
-            0 0.06rem 0.04rem rgba(variables.$color-secondary-icon-delta, 70%)
-          );
+        filter: drop-shadow(0 0.13rem 0.17rem variables.$color-secondary-icon-gamma)
+          drop-shadow(0 0.06rem 0.04rem rgba(variables.$color-secondary-icon-delta, 70%));
         stroke: rgba(variables.$color-secondary-icon-beta, 20%);
       } @else if $hue == tertiary {
-        filter: drop-shadow(
-            0 0.13rem 0.17rem variables.$color-tertiary-icon-gamma
-          )
-          drop-shadow(
-            0 0.06rem 0.04rem rgba(variables.$color-tertiary-icon-delta, 70%)
-          );
+        filter: drop-shadow(0 0.13rem 0.17rem variables.$color-tertiary-icon-gamma)
+          drop-shadow(0 0.06rem 0.04rem rgba(variables.$color-tertiary-icon-delta, 70%));
         stroke: rgba(variables.$color-tertiary-icon-beta, 20%);
       }
 
@@ -336,18 +324,15 @@
 
     .layer-4 {
       @if $hue == primary {
-        text-shadow: -0.02rem 0.04rem 0.02rem rgba(#fff, 50%),
-          0 0.44rem 0.69rem variables.$color-primary-gamma,
+        text-shadow: -0.02rem 0.04rem 0.02rem rgba(#fff, 50%), 0 0.44rem 0.69rem variables.$color-primary-gamma,
           0 0.19rem 0.15rem rgba(variables.$color-primary-delta, 70%);
         -webkit-text-stroke: 0.21rem rgba(variables.$color-primary-beta, 20%);
       } @else if $hue == secondary {
-        text-shadow: -0.03rem 0.05rem 0.03rem rgba(#fff, 50%),
-          0 0.53rem 0.69rem variables.$color-secondary-gamma,
+        text-shadow: -0.03rem 0.05rem 0.03rem rgba(#fff, 50%), 0 0.53rem 0.69rem variables.$color-secondary-gamma,
           0 0.23rem 0.18rem rgba(variables.$color-secondary-delta, 70%);
         -webkit-text-stroke: 0.22rem rgba(variables.$color-secondary-beta, 20%);
       } @else if $hue == tertiary {
-        text-shadow: -0.02rem 0.04rem 0.02rem rgba(#fff, 50%),
-          0 0.41rem 0.53rem variables.$color-tertiary-gamma,
+        text-shadow: -0.02rem 0.04rem 0.02rem rgba(#fff, 50%), 0 0.41rem 0.53rem variables.$color-tertiary-gamma,
           0 0.18rem 0.14rem rgba(variables.$color-tertiary-delta, 70%);
         -webkit-text-stroke: 0.18rem rgba(variables.$color-tertiary-beta, 20%);
       }

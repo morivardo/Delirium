@@ -1,13 +1,13 @@
-@use "../abstracts/variables.scss";
-@use "../abstracts/mixin.scss";
+@use '../abstracts/variables.scss';
+@use '../abstracts/mixin.scss';
 
 #delirium {
   .wrapper {
-    background-image: url("img/desktop_delirium_background.svg");
+    background-image: url('/assets/img/desktop_delirium_background.svg');
   }
 
   .slide-0 {
-    background-image: url("img/desktop_delirium_intro.webp");
+    background-image: url('/assets/img/desktop_delirium_intro.webp');
 
     .container-h1 {
       left: 50%;

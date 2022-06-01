@@ -1,13 +1,13 @@
-@use "../abstracts/variables.scss";
-@use "../abstracts/mixin.scss";
+@use '../abstracts/variables.scss';
+@use '../abstracts/mixin.scss';
 
 #scopri {
   .wrapper {
-    background-image: url(img/desktop_scopri_background.svg);
+    background-image: url('/assets/imgdesktop_scopri_background.svg');
   }
 
   .slide-0 {
-    background-image: url(img/desktop_scopri_intro.webp);
+    background-image: url('/assets/imgdesktop_scopri_intro.webp');
 
     .container-h1 {
       left: 50%;
@@ -41,11 +41,11 @@
           }
 
           &:nth-child(2) {
-            justify-content: end;
+            justify-content: flex-end;
           }
 
           &:last-child {
-            justify-content: start;
+            justify-content: flex-start;
           }
         }
       }
@@ -131,10 +131,10 @@
         [c] calc(100% / 3 - 2rem / 3) [d];
       row-gap: 1.5rem;
 
-      div[class^="cell"] {
+      div[class^='cell'] {
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
         position: relative;
 
         .number > span {
@@ -314,7 +314,7 @@
 
         .point {
           background-color: variables.$color-neutral-light;
-          content: "";
+          content: '';
           display: block;
           height: 1rem;
           margin-top: 3px;

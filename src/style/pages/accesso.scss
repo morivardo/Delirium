@@ -1,12 +1,12 @@
-@use "../abstracts/variables.scss";
-@use "../abstracts/mixin.scss";
+@use '../abstracts/variables.scss';
+@use '../abstracts/mixin.scss';
 
 #accesso {
   .wrapper {
-    background-image: url("img/desktop_accesso_background.svg");
+    background-image: url('/assets/img/desktop_accesso_background.svg');
 
     .slide-0 {
-      background-image: url("img/desktop_accesso_intro.webp");
+      background-image: url('/assets/img/desktop_accesso_intro.webp');
       position: relative;
 
       .container-h1 {
@@ -27,7 +27,7 @@
         margin: 17vh 0 8vh;
 
         .col-6 {
-          background-image: url("img/desktop_accesso_cambialatuavita_1.webp");
+          background-image: url('/assets/img/desktop_accesso_cambialatuavita_1.webp');
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
@@ -74,7 +74,7 @@
               rgba(variables.$color-neutral-dark, 100%) 10%,
               rgba(variables.$color-neutral-dark, 0) 100%
             );
-            content: "";
+            content: '';
             height: 100%;
             left: 0;
             position: absolute;
@@ -232,7 +232,7 @@
                             width: 100%;
 
                             #image-preview {
-                              background-image: url("img/desktop_accesso_registrazione.jpg");
+                              background-image: url('/assets/img/desktop_accesso_registrazione.jpg');
                               background-size: cover;
                               background-repeat: no-repeat;
                               background-position: center;

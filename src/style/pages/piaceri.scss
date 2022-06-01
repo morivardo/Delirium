@@ -1,13 +1,13 @@
-@use "../abstracts/variables.scss";
-@use "../abstracts/mixin.scss";
+@use '../abstracts/variables.scss';
+@use '../abstracts/mixin.scss';
 
 #piaceri {
   .wrapper {
-    background-image: url("img/desktop_piaceri_background.svg");
+    background-image: url('/assets/img/desktop_piaceri_background.svg');
   }
 
   .slide-0 {
-    background-image: url("img/desktop_piaceri_intro.webp");
+    background-image: url('/assets/img/desktop_piaceri_intro.webp');
 
     .container-h1 {
       left: 50%;
@@ -40,7 +40,7 @@
         .col-12 {
           height: 46.9vh;
 
-          div[class^="col"] {
+          div[class^='col'] {
             position: relative;
           }
 
@@ -57,7 +57,7 @@
           margin-top: 10%;
           z-index: 5;
 
-          div[class^="col"] {
+          div[class^='col'] {
             margin-left: -5%;
             position: relative;
             z-index: 2;
@@ -67,7 +67,7 @@
         .row:nth-child(2) {
           margin-top: -35%;
 
-          div[class^="col"] {
+          div[class^='col'] {
             position: relative;
           }
         }
@@ -76,7 +76,7 @@
           margin-top: -20%;
           z-index: 5;
 
-          div[class^="col"] {
+          div[class^='col'] {
             position: relative;
             padding: 3% 0 3% 10%;
           }
@@ -120,7 +120,7 @@ source {
   width: 54vw;
 }
 
-div[class^="modal-layer"] {
+div[class^='modal-layer'] {
   height: 85vh;
   left: 50%;
   position: absolute;

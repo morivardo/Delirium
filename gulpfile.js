@@ -1,34 +1,35 @@
-//Dependences
-const { src, dest, watch, series } = require("gulp");
-const browserSync = require("browser-sync").create();
-const cssnano = require("cssnano");
-const imagemin = require("gulp-imagemin");
-const merge = require("merge-stream");
-const newer = require("gulp-newer");
-const postcss = require("gulp-postcss");
-const prefix = require("gulp-autoprefixer");
-const sass = require("gulp-sass")(require("sass"));
-const terser = require("gulp-terser");
-const webp = require("gulp-cwebp");
+// Dependences
+const { src, dest, watch, series } = require('gulp');
+const browserSync = require('browser-sync').create();
+const cssnano = require('cssnano');
+const imagemin = require('gulp-imagemin');
+const merge = require('merge-stream');
+const newer = require('gulp-newer');
+const php = require('gulp-connect-php');
+const postcss = require('gulp-postcss');
+const prefix = require('gulp-autoprefixer');
+const sass = require('gulp-sass')(require('sass'));
+const terser = require('gulp-terser');
+const webp = require('gulp-cwebp');
 
-//Compile, prefix, and minify .scss/.sass files
+// Compile, prefix, and minify .scss/.sass files
 function compileScss() {
-  return src("src/style/main.scss")
+  return src('src/style/main.scss')
     .pipe(sass())
-    .pipe(prefix("last 2 versions"))
+    .pipe(prefix('last 2 versions'))
     .pipe(postcss([cssnano()]))
-    .pipe(dest("public"));
+    .pipe(dest('public/assets/style'));
 }
 
 // Minify .js files
 function minJs() {
-  return src("src/script/*.js").pipe(terser()).pipe(dest("public/script"));
+  return src('src/script/*.js').pipe(terser()).pipe(dest('public/assets/script'));
 }
 
-//Optimize images
+// Optimize images
 function optimizeImg() {
-  return src("src/img/*.{jpg,png}")
-    .pipe(newer("public/img"))
+  return src('src/img/*.{jpg,png}')
+    .pipe(newer('public/assets/img'))
     .pipe(
       imagemin([
         imagemin.gifsicle({
@@ -53,20 +54,18 @@ function optimizeImg() {
         }),
       ]),
     )
-    .pipe(dest("public/img"));
+    .pipe(dest('public/assets/img'));
 }
 
-//Convert images to .webp
+// Convert images to .webp
 function webpImg() {
-  return src("public/img/*.{jpg,png}").pipe(webp()).pipe(dest("public/img"));
+  return src('public/assets/img/*.{jpg,png}').pipe(webp()).pipe(dest('public/assets/img'));
 }
 
 function copyToFront() {
-  let fonts = src("src/fonts/*/*.*").pipe(dest("public/fonts"));
-  let audio = src("src/audio/*.*").pipe(dest("public/audio"));
-  let panel_snap = src("node_modules/panelsnap/docs/panelsnap.js").pipe(
-    dest("public/script/modules"),
-  );
+  const fonts = src('src/fonts/*/*.*').pipe(dest('public/assets/fonts'));
+  const audio = src('src/audio/*.*').pipe(dest('public/assets/audio'));
+  /*  let panel_snap = src('node_modules/panelsnap/docs/panelsnap.js').pipe(dest('public/assets/script/modules')); */
 
   return merge(fonts, audio);
 }
@@ -74,10 +73,11 @@ function copyToFront() {
 // BrowserSync task
 function browserSyncServe(cb) {
   browserSync.init({
-    server: {
-      baseDir: "public",
-    },
-    browser: ["google chrome"],
+    proxy: 'localhost:8010',
+    baseDir: 'public/',
+    open: true,
+    notify: false,
+    browser: ['google chrome'],
   });
   cb();
 }
@@ -87,30 +87,23 @@ function browserSyncReload(cb) {
   cb();
 }
 
-//Checks and executes tasks automatically
+function startServer() {
+  php.server({ base: 'public/', port: 8010, keepalive: true });
+}
+
+// Checks and executes tasks automatically
 function watchTask() {
   watch(
-    [
-      "src/style/main.scss",
-      "src/style/layouts/**",
-      "src/style/abstracts/**",
-      "src/style/pages/**",
-    ],
+    ['src/style/main.scss', 'src/style/layouts/**', 'src/style/abstracts/**', 'src/style/pages/**'],
     series(compileScss, browserSyncReload),
   );
-  watch("src/script/**", series(minJs, browserSyncReload));
-  watch("src/img/*.{jpg,png}", series(optimizeImg, browserSyncReload));
-  watch("public/img/*.{jpg,png}", series(webpImg, browserSyncReload));
-  watch("public/*.html", browserSyncReload);
+  watch('src/script/**', series(minJs, browserSyncReload));
+  watch('src/img/*.{jpg,png}', series(optimizeImg, browserSyncReload));
+  watch('public/assets/img/*.{jpg,png}', series(webpImg, browserSyncReload));
+  watch(['public/views/**/*.html', 'public/*.php', 'public/.htaccess'], browserSyncReload);
 }
 
 // Default Gulp task
-exports.default = series(
-  copyToFront,
-  compileScss,
-  minJs,
-  optimizeImg,
-  webpImg,
-  browserSyncServe,
-  watchTask,
-);
+exports.default = series(copyToFront, compileScss, minJs, optimizeImg, webpImg, browserSyncServe, watchTask);
+
+exports.server = startServer;

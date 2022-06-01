@@ -1,13 +1,13 @@
-@use "../abstracts/variables.scss";
-@use "../abstracts/mixin.scss";
+@use '../abstracts/variables.scss';
+@use '../abstracts/mixin.scss';
 
 #traume-hotel {
   .wrapper {
-    background-image: url("img/desktop_thetraumehotel_background.svg");
+    background-image: url('/assets/img/desktop_thetraumehotel_background.svg');
   }
 
   .slide-0 {
-    background-image: url("img/desktop_theträumehotel_intro.webp");
+    background-image: url('/assets/img/desktop_theträumehotel_intro.webp');
 
     .container-h1 {
       left: 50%;
@@ -131,7 +131,7 @@
 
               &::before {
                 background-color: rgba(variables.$color-neutral-dark, 50%);
-                content: "";
+                content: '';
                 filter: blur(2.5rem);
                 height: 110%;
                 position: absolute;
@@ -252,7 +252,7 @@
 
             &::before {
               background-color: rgba(variables.$color-neutral-dark, 50%);
-              content: "";
+              content: '';
               filter: blur(2.5rem);
               height: 110%;
               position: absolute;
@@ -348,7 +348,7 @@
 
           &::before {
             background-color: rgba(variables.$color-neutral-dark, 50%);
-            content: "";
+            content: '';
             filter: blur(2.5rem);
             height: 110%;
             position: absolute;

@@ -1,20 +1,20 @@
-@use "sass:map";
+@use 'sass:map';
 
 @font-face {
-  font-family: "Anurati";
-  src: url("../fonts/anurati-free/Anurati-Regular.otf");
+  font-family: 'Anurati';
+  src: url('/assets/fonts/anurati-free/Anurati-Regular.otf');
 }
 
 @font-face {
-  font-family: "Times Square";
-  src: url("../fonts/times-square/timessq.ttf");
+  font-family: 'Times Square';
+  src: url('/assets/fonts/times-square/timessq.ttf');
 }
 
 // All fonts
-$font-body: ("Abel", sans-serif);
-$font-cta: ("Times Square", fallback, sans-serif);
-$font-number: ("Roboto", sans-serif);
-$font-title: ("Anurati", fallback, sans-serif);
+$font-body: ('Abel', sans-serif);
+$font-cta: ('Times Square', fallback, sans-serif);
+$font-number: ('Roboto', sans-serif);
+$font-title: ('Anurati', fallback, sans-serif);
 
 // Body colors
 $color-neutral-dark: #030722;
@@ -22,13 +22,13 @@ $color-neutral-light: #fdfefd;
 
 // Primary color variants
 $color-primary: (
-  "tint-1": #82d9ff,
-  "tint-2": #00b8fc,
-  "tint-3": #00b2ff,
-  "tint-4": #0094ff,
-  "tint-5": #128dff,
-  "tint-6": #0066ff,
-  "tint-7": #000d15,
+  'tint-1': #82d9ff,
+  'tint-2': #00b8fc,
+  'tint-3': #00b2ff,
+  'tint-4': #0094ff,
+  'tint-5': #128dff,
+  'tint-6': #0066ff,
+  'tint-7': #000d15,
 );
 $color-primary-alpha: map.get($color-primary, tint-1);
 $color-primary-beta: map.get($color-primary, tint-3);
@@ -48,13 +48,13 @@ $color-primary-icon-eta: map.get($color-primary, tint-5);
 
 // Secondary color variants
 $color-secondary: (
-  "tint-1": #fa418f,
-  "tint-2": #ff3780,
-  "tint-3": #fb37ff,
-  "tint-4": #ff26c2,
-  "tint-5": #f32e7c,
-  "tint-6": #990099,
-  "tint-7": #4d0042,
+  'tint-1': #fa418f,
+  'tint-2': #ff3780,
+  'tint-3': #fb37ff,
+  'tint-4': #ff26c2,
+  'tint-5': #f32e7c,
+  'tint-6': #990099,
+  'tint-7': #4d0042,
 );
 $color-secondary-alpha: map.get($color-secondary, tint-4);
 $color-secondary-beta: map.get($color-secondary, tint-5);
@@ -74,13 +74,13 @@ $color-secondary-icon-eta: map.get($color-secondary, tint-2);
 
 // Tertiary color variants
 $color-tertiary: (
-  "tint-1": #c882ff,
-  "tint-2": #cc00ff,
-  "tint-3": #8f00ff,
-  "tint-4": #6100ff,
-  "tint-5": #8300c1,
-  "tint-6": #32178a,
-  "tint-7": #0e0015,
+  'tint-1': #c882ff,
+  'tint-2': #cc00ff,
+  'tint-3': #8f00ff,
+  'tint-4': #6100ff,
+  'tint-5': #8300c1,
+  'tint-6': #32178a,
+  'tint-7': #0e0015,
 );
 $color-tertiary-alpha: map.get($color-tertiary, tint-1);
 $color-tertiary-beta: map.get($color-tertiary, tint-4);
