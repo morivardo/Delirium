@@ -67,7 +67,11 @@
   }
 
   echo 'if (screen.width > 1200) {
-            window.location.replace("/views/" + doc + "/" + doc + ".html");
+            if (doc == "index") {
+              window.location.replace("/" + doc + ".html");
+            } else {
+              window.location.replace("/views/" + doc + "/" + doc + ".html");
+            }
           } else if (screen.width <= 1200 && screen.width > 600) {
             window.location.replace("/views/" + doc + "/t-" + doc + ".html");
           } else if (screen.width <= 600) {
