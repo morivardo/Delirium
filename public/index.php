@@ -23,19 +23,15 @@
   switch (true) {
     case empty($request):
       echo '<script type="text/JavaScript">
-              let doc = "home";';
+              let doc = "index";';
       break;
     case str_ends_with($request, '/'):
       echo '<script type="text/JavaScript">
-              let doc = "home";';
+              let doc = "index";';
       break;
     case str_ends_with($request, '/index'):
       echo '<script type="text/JavaScript">
-              let doc = "home";';
-      break;
-    case str_ends_with($request, '/home'):
-      echo '<script type="text/JavaScript">
-              let doc = "home";';
+              let doc = "index";';
       break;
     case str_ends_with($request, '/delirium'):
       echo '<script type="text/JavaScript">
