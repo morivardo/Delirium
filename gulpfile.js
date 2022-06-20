@@ -60,7 +60,10 @@ function optimizeImg() {
 
 // Convert images to .webp
 function webpImg() {
-  return src('public/assets/img/**/**/*.{jpg,png}').pipe(webp()).pipe(dest('public/assets/img'));
+  return src('public/assets/img/**/**/*.{jpg,png}')
+    .pipe(changed('public/assets/img'))
+    .pipe(webp())
+    .pipe(dest('public/assets/img'));
 }
 
 function copyToFront() {
