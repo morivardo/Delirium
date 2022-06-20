@@ -1,10 +1,11 @@
+/* eslint-disable import/no-unresolved */
 // Dependences
 const { src, dest, watch, series } = require('gulp');
 const browserSync = require('browser-sync').create();
 const cssnano = require('cssnano');
 const imagemin = require('gulp-imagemin');
 const merge = require('merge-stream');
-const newer = require('gulp-newer');
+const changed = require('gulp-changed');
 const php = require('gulp-connect-php');
 const postcss = require('gulp-postcss');
 const prefix = require('gulp-autoprefixer');
@@ -28,8 +29,8 @@ function minJs() {
 
 // Optimize images
 function optimizeImg() {
-  return src('src/img/*.{jpg,png}')
-    .pipe(newer('public/assets/img'))
+  return src('src/img/**/**/*.{jpg,png,svg}')
+    .pipe(changed('public/assets/img'))
     .pipe(
       imagemin([
         imagemin.gifsicle({
@@ -59,15 +60,16 @@ function optimizeImg() {
 
 // Convert images to .webp
 function webpImg() {
-  return src('public/assets/img/*.{jpg,png}').pipe(webp()).pipe(dest('public/assets/img'));
+  return src('public/assets/img/**/**/*.{jpg,png}').pipe(webp()).pipe(dest('public/assets/img'));
 }
 
 function copyToFront() {
-  const fonts = src('src/fonts/*/*.*').pipe(dest('public/assets/fonts'));
   const audio = src('src/audio/*.*').pipe(dest('public/assets/audio'));
-  /*  let panel_snap = src('node_modules/panelsnap/docs/panelsnap.js').pipe(dest('public/assets/script/modules')); */
+  const fonts = src('src/fonts/*/*.*').pipe(dest('public/assets/fonts'));
+  const gif = src('src/img/**/**/*.gif').pipe(dest('public/assets/img'));
+  // const panel_snap = src('node_modules/panelsnap/docs/panelsnap.js').pipe(dest('public/assets/script/modules'));
 
-  return merge(fonts, audio);
+  return merge(audio, fonts, gif);
 }
 
 // BrowserSync task
@@ -88,7 +90,7 @@ function browserSyncReload(cb) {
 }
 
 function startServer() {
-  php.server({ base: 'public/', port: 8010, keepalive: true });
+  php.server({ base: 'public', port: 8010, router: 'api/cliserver.php' });
 }
 
 // Checks and executes tasks automatically

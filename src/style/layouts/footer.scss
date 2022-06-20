@@ -1,5 +1,5 @@
-@use "../abstracts/variables.scss";
-@use "../abstracts/mixin.scss";
+@use '../abstracts/variables.scss';
+@use '../abstracts/mixin.scss';
 
 footer {
   background-color: variables.$color-neutral-dark;
@@ -116,9 +116,7 @@ footer {
           }
 
           a {
-            filter: drop-shadow(
-              0 0 0.5rem rgba(variables.$color-primary-beta, 30%)
-            );
+            filter: drop-shadow(0 0 0.5rem rgba(variables.$color-primary-beta, 30%));
 
             svg {
               border: none;

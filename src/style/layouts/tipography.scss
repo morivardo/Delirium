@@ -1,5 +1,5 @@
-@use "../abstracts/variables.scss";
-@use "../abstracts/mixin.scss";
+@use '../abstracts/variables.scss';
+@use '../abstracts/mixin.scss';
 
 html {
   font-size: 100%;
@@ -57,7 +57,7 @@ body {
 
   position: relative;
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     border: solid 1px #fff;
     border-radius: 0;
     background: none !important;
@@ -69,7 +69,7 @@ body {
 
     &::before {
       box-shadow: inset 2rem 2rem #fff;
-      content: "";
+      content: '';
       height: 2rem;
       transform: scale(0);
       transition: 120ms transform ease-in-out;
@@ -244,7 +244,7 @@ body {
     @include mixin.glow-layering(text, tertiary);
   }
 
-  span[class^="layer"] {
+  span[class^='layer'] {
     color: transparent;
     position: absolute;
     top: 0;
@@ -329,7 +329,7 @@ p {
 
   &::before {
     background-color: rgba(variables.$color-neutral-dark, 50%);
-    content: "";
+    content: '';
     filter: blur(3.25rem);
     height: calc(100% + 2rem + 2em);
     left: 0;
@@ -339,7 +339,7 @@ p {
     z-index: 1;
   }
 
-  div[class^="container-h"] {
+  div[class^='container-h'] {
     display: inline-block;
     z-index: 2;
   }

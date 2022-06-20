@@ -1,5 +1,5 @@
-@use "../abstracts/variables.scss";
-@use "../abstracts/mixin.scss";
+@use '../abstracts/variables.scss';
+@use '../abstracts/mixin.scss';
 
 html {
   scrollbar-width: none;
@@ -24,7 +24,7 @@ body {
   }
 }
 
-section[class^="slide"] {
+section[class^='slide'] {
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
