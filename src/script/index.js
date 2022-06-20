@@ -1,5 +1,5 @@
-let cacheHeight = screen.height; // Needs for store the screen size and prevent scroll-resize in mobile devices
-let cacheWidth = screen.width; // Needs for store the screen size and prevent scroll-resize in mobile devices
+const cacheHeight = window.screen.height; // Needs for store the screen size and prevent scroll-resize in mobile devices
+const cacheWidth = window.screen.width; // Needs for store the screen size and prevent scroll-resize in mobile devices
 
 // Create animation for the hamburger menu
 function animateBurger() {
@@ -42,7 +42,7 @@ function layering(tag, n) {
   el.forEach((h) => {
     const content = h.innerText;
     const div = document.createElement('div');
-    div.classList.add('container-' + names);
+    div.classList.add(`container-${names}`);
 
     if (h.classList.contains('primary-color')) {
       div.classList.add('container-primary-color');
@@ -62,7 +62,7 @@ function layering(tag, n) {
     const s = [];
     for (let i = 0; i < n; i++) {
       s[i] = document.createElement('span');
-      s[i].classList.add('glow-layer', 'layer-' + i);
+      s[i].classList.add('glow-layer', `layer-${i}`);
       s[i].innerText = content;
       div.append(s[i]);
     }
@@ -110,7 +110,7 @@ function resizeWrapper() {
 
   if (typeof wrapper !== 'undefined' && wrapper != null) {
     const w = wrapper.querySelectorAll('section[class^="slide"]').length;
-    wrapper.style.width = w * 100 + 22 + 'vw';
+    wrapper.style.width = `${w * 100 + 22}vw`;
   }
 }
 
@@ -118,11 +118,13 @@ function resizeWrapper() {
 function resizeRouting() {
   function pathing() {
     let path;
-    if (window.location.href.split('/').slice(-1) != '') {
+    if (window.location.href.split('/').slice(-1) !== '') {
       path = window.location.href.split('/').slice(-1);
     } else {
       path = 'index.html';
     }
+
+    path = window.location.href.split('.').slice(0);
 
     if (path[0].includes('-')) return path[0].split('-').slice(-1);
     else return path;
@@ -130,12 +132,12 @@ function resizeRouting() {
 
   const doc = pathing();
 
-  if (screen.width > 1200) {
-    window.location.replace(doc);
-  } else if (screen.width <= 1200 && screen.width > 600) {
-    window.location.replace('t-' + doc);
-  } else if (screen.width <= 600) {
-    window.location.replace('m-' + doc);
+  if (window.screen.width > 1200) {
+    window.location.replace(`/views/${doc}/${doc}.html`);
+  } else if (window.screen.width <= 1200 && window.screen.width > 600) {
+    window.location.replace(`/views/${doc}/t-${doc}.html`);
+  } else if (window.screen.width <= 600) {
+    window.location.replace(`/views/${doc}/m-${doc}.html`);
   }
 }
 
@@ -144,7 +146,7 @@ function previewFile() {
   const reader = new FileReader();
   reader.onload = function () {
     const output = document.getElementById('image-preview');
-    output.style.backgroundImage = 'url(' + reader.result + ')';
+    output.style.backgroundImage = `url(${reader.result})`;
   };
   reader.readAsDataURL(event.target.files[0]);
 }
@@ -158,14 +160,14 @@ function submenu() {
     subMenuItems.forEach((subMenuEl) => subMenuEl.classList.remove('active'));
 
     const panelName = panel.getAttribute('data-panel');
-    const subMenuObject = subMenu.querySelector('.slide-anchor[data-panel="' + panelName + '"]');
+    const subMenuObject = subMenu.querySelector(`.slide-anchor[data-panel=${panelName}]`);
     subMenuObject.classList.add('active');
   });
 
   subMenuItems.forEach((subMenuEl) => {
     subMenuEl.addEventListener('click', (e) => {
       const panelName = e.target.getAttribute('data-panel');
-      const panel = document.querySelector('.slide[data-panel="' + panelName + '"]');
+      const panel = document.querySelector(`.slide[data-panel=${panelName}]`);
 
       panelSnapInstance.snapToPanel(panel);
     });
@@ -188,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('resize', () => {
-  if (screen.width !== cacheWidth || screen.height !== cacheHeight) {
+  if (window.screen.width !== cacheWidth || window.screen.height !== cacheHeight) {
     resizeRouting();
   }
 });

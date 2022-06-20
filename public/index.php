@@ -52,18 +52,12 @@
       break;
   }
 
-  echo '  console.log("dio cane?");
-          setTimeout(() => {
-  
-          if (screen.width > 1200) {
+  echo '  
+          if (window.screen.width > 1200) {
             window.location.replace("/views/" + doc + "/" + doc + ".html");
-          } else if (screen.width <= 1200 && screen.width > 600) {
+          } else if (window.screen.width <= 1200 && window.screen.width > 600) {
             window.location.replace("/views/" + doc + "/t-" + doc + ".html");
-          } else if (screen.width <= 600) {
+          } else if (window.screen.width <= 600) {
             window.location.replace("/views/" + doc + "/m-" + doc + ".html");
           }
-
-          }, 2000);
-          
-
         </script>';

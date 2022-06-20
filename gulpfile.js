@@ -102,7 +102,7 @@ function watchTask() {
     ['src/style/main.scss', 'src/style/layouts/**', 'src/style/abstracts/**', 'src/style/pages/**'],
     series(compileScss, browserSyncReload),
   );
-  watch('src/script/**', series(minJs, browserSyncReload));
+  watch('src/script/*.js', series(minJs, browserSyncReload));
   watch('src/img/*.{jpg,png}', series(optimizeImg, browserSyncReload));
   watch('public/assets/img/*.{jpg,png}', series(webpImg, browserSyncReload));
   watch(['public/views/**/*.html', 'public/*.php', 'public/.htaccess'], browserSyncReload);
