@@ -1,5 +1,5 @@
-const cacheHeight = window.screen.height; // Needs for store the screen size and prevent scroll-resize in mobile devices
-const cacheWidth = window.screen.width; // Needs for store the screen size and prevent scroll-resize in mobile devices
+const cacheHeight = window.innerHeight; // Needs for store the screen size and prevent scroll-resize in mobile devices
+const cacheWidth = window.innerWidth; // Needs for store the screen size and prevent scroll-resize in mobile devices
 
 // Create animation for the hamburger menu
 function animateBurger() {
@@ -60,7 +60,7 @@ function layering(tag, n) {
     div.append(h);
 
     const s = [];
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < n; i += 1) {
       s[i] = document.createElement('span');
       s[i].classList.add('glow-layer', `layer-${i}`);
       s[i].innerText = content;
@@ -120,23 +120,23 @@ function resizeRouting() {
     let path;
     if (window.location.href.split('/').slice(-1) !== '') {
       path = window.location.href.split('/').slice(-1);
+      path = path[0].split('.').shift();
     } else {
-      path = 'index.html';
+      path = 'index';
     }
 
-    path = window.location.href.split('.').slice(0);
+    if (path.includes('-')) path = path.split('-').pop();
 
-    if (path[0].includes('-')) return path[0].split('-').slice(-1);
-    else return path;
+    return path;
   }
 
   const doc = pathing();
 
-  if (window.screen.width > 1200) {
+  if (window.innerWidth > 1200) {
     window.location.replace(`/views/${doc}/${doc}.html`);
-  } else if (window.screen.width <= 1200 && window.screen.width > 600) {
+  } else if (window.innerWidth <= 1200 && window.innerWidth > 600) {
     window.location.replace(`/views/${doc}/t-${doc}.html`);
-  } else if (window.screen.width <= 600) {
+  } else if (window.innerWidth <= 600) {
     window.location.replace(`/views/${doc}/m-${doc}.html`);
   }
 }
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.screen.width !== cacheWidth || window.screen.height !== cacheHeight) {
+  if (window.innerWidth !== cacheWidth || window.screen.height !== cacheHeight) {
     resizeRouting();
   }
 });

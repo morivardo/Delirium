@@ -53,11 +53,17 @@
   }
 
   echo '  
-          if (window.screen.width > 1200) {
+        console.log("porco dio");
+        setTimeout(function () {
+
+         if (window.innerWidth > 1200) {
             window.location.replace("/views/" + doc + "/" + doc + ".html");
-          } else if (window.screen.width <= 1200 && window.screen.width > 600) {
+          } else if (window.innerWidth <= 1200 && window.innerWidth > 600) {
             window.location.replace("/views/" + doc + "/t-" + doc + ".html");
-          } else if (window.screen.width <= 600) {
+          } else if (window.innerWidth <= 600) {
             window.location.replace("/views/" + doc + "/m-" + doc + ".html");
           }
+        }, 1000);
         </script>';
+
+       // echo $request;
