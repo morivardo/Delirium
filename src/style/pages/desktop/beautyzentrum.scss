@@ -2,11 +2,11 @@
 @use '../../abstracts/mixin.scss';
 
 #beautyzentrum {
-  .wrapper {
+  #wrapper {
     background-image: url('/assets/img/desktop/beautyzentrum/desktop_beautyzentrum_background.svg');
   }
 
-  .slide-0 {
+  .slice-0 {
     background-image: url('/assets/img/desktop/beautyzentrum/desktop_beautyzentrum_intro.webp');
 
     .container-h1 {
@@ -22,7 +22,7 @@
     }
   }
 
-  .slide-1 {
+  .slice-1 {
     .row:first-child {
       margin-top: 26vh;
       position: relative;
@@ -64,7 +64,7 @@
     }
   }
 
-  .slide-2 {
+  .slice-2 {
     .row:first-child {
       height: 40vh;
       margin-top: 10vh;
@@ -135,7 +135,7 @@
     }
   }
 
-  .slide-3 {
+  .slice-3 {
     .container-xl {
       .row:first-child {
         margin-top: 33vh;
@@ -249,10 +249,11 @@
     }
   }
 
-  .slide-4 {
+  .slice-4 {
     .container-xl {
       .row:first-child {
         margin-top: 20vh;
+
         .col {
           display: flex;
           justify-content: center;
@@ -346,7 +347,7 @@
     }
   }
 
-  .slide-5 {
+  .slice-5 {
     .row {
       margin-top: 13vh;
 
@@ -395,7 +396,7 @@
     }
   }
 
-  .slide-6 {
+  .slice-6 {
     .row {
       margin-top: 21vh;
 

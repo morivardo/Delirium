@@ -82,6 +82,104 @@
       filter: blur(0.03rem);
       z-index: 9;
     }
+  } @else if $type == carousel {
+    .icon {
+      fill: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: linear 0.3s;
+
+      &:first-child {
+        fill: #fff;
+        z-index: 3;
+      }
+    }
+
+    .layer-0 {
+      @if $hue == primary {
+        background-color: rgba(variables.$color-primary-icon-eta, 30%);
+      } @else if $hue == secondary {
+        background-color: rgba(variables.$color-secondary-icon-eta, 30%);
+      } @else if $hue == tertiary {
+        background-color: rgba(variables.$color-tertiary-icon-eta, 30%);
+      }
+
+      filter: blur(0.63rem);
+      z-index: 4;
+    }
+
+    .layer-1 {
+      @if $hue == primary {
+        stroke: variables.$color-primary-icon-zeta;
+      } @else if $hue == secondary {
+        stroke: variables.$color-secondary-icon-zeta;
+      } @else if $hue == tertiary {
+        stroke: variables.$color-tertiary-icon-zeta;
+      }
+
+      filter: blur(0.63rem);
+      stroke-width: 1.6;
+      z-index: 5;
+    }
+
+    .layer-2 {
+      @if $hue == primary {
+        stroke: variables.$color-primary-icon-epsilon;
+      } @else if $hue == secondary {
+        stroke: variables.$color-secondary-icon-epsilon;
+      } @else if $hue == tertiary {
+        stroke: variables.$color-tertiary-icon-epsilon;
+      }
+
+      filter: blur(0.21rem);
+      stroke-width: 2.1;
+      z-index: 6;
+    }
+
+    .layer-3 {
+      @if $hue == primary {
+        filter: drop-shadow(0 0.21rem 0.27rem variables.$color-primary-icon-gamma)
+          drop-shadow(0 0.09rem 0.07rem rgba(variables.$color-primary-icon-delta, 70%));
+        stroke: rgba(variables.$color-primary-icon-beta, 20%);
+      } @else if $hue == secondary {
+        filter: drop-shadow(0 0.21rem 0.27rem variables.$color-secondary-icon-gamma)
+          drop-shadow(0 0.09rem 0.07rem rgba(variables.$color-secondary-icon-delta, 70%));
+        stroke: rgba(variables.$color-secondary-icon-beta, 20%);
+      } @else if $hue == tertiary {
+        filter: drop-shadow(0 0.21rem 0.27rem variables.$color-tertiary-icon-gamma)
+          drop-shadow(0 0.09rem 0.07rem rgba(variables.$color-tertiary-icon-delta, 70%));
+        stroke: rgba(variables.$color-tertiary-icon-beta, 20%);
+      }
+
+      stroke-width: 1.6;
+      z-index: 7;
+
+      &::before {
+        filter: drop-shadow(inset -0.01rem 0.02rem 0.01rem rgba(#fff, 50%));
+      }
+    }
+
+    .layer-4 {
+      @if $hue == primary or tertiary {
+        stroke: variables.$color-primary-icon-alpha;
+      } @else if $hue == secondary {
+        stroke: variables.$color-secondary-icon-alpha;
+      } @else if $hue == tertiary {
+        stroke: variables.$color-tertiary-icon-alpha;
+      }
+
+      filter: blur(0.01rem);
+      stroke-width: 1;
+      z-index: 8;
+    }
+
+    .layer-5 {
+      filter: blur(0.01rem);
+      stroke: #fff;
+      stroke-width: 0.5;
+      z-index: 9;
+    }
   } @else if $type == frame {
     & > .layer-0 {
       @if $hue == primary {
@@ -169,6 +267,29 @@
 
       filter: blur(0.16rem);
       z-index: 9;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      & > .layer-1 {
+        border-width: 0.64rem !important;
+      }
+
+      & > .layer-2 {
+        border-width: 0.83rem !important;
+      }
+
+      & > .layer-3 {
+        border-width: 0.64rem !important;
+      }
+
+      & > .layer-4 {
+        border-width: 0.4rem !important;
+      }
+
+      & > .layer-5 {
+        border-width: 0.2rem !important;
+        filter: blur(0.07rem) !important;
+      }
     }
   } @else if $type == icon {
     .icon {
@@ -262,6 +383,114 @@
       stroke: #fff;
       stroke-width: 4.5;
       z-index: 9;
+    }
+  } @else if $type == strip {
+    & > .layer-0 {
+      @if $hue == primary {
+        background-color: rgba(variables.$color-primary-zeta, 30%);
+      } @else if $hue == secondary {
+        background-color: rgba(variables.$color-secondary-zeta, 30%);
+      } @else if $hue == tertiary {
+        background-color: rgba(variables.$color-tertiary-zeta, 30%);
+      }
+
+      border-radius: 5rem;
+      filter: blur(4.47rem);
+      z-index: 4;
+    }
+
+    & > .layer-1 {
+      @if $hue == primary {
+        border: solid 0.64rem variables.$color-primary-beta;
+      } @else if $hue == secondary {
+        border: solid 0.64rem variables.$color-secondary-beta;
+      } @else if $hue == tertiary {
+        border: solid 0.64rem variables.$color-tertiary-beta;
+      }
+
+      filter: blur(4.47rem);
+      z-index: 1;
+    }
+
+    & > .layer-2 {
+      @if $hue == primary {
+        border: solid 0.83rem variables.$color-primary-alpha;
+      } @else if $hue == secondary {
+        border: solid 0.83rem variables.$color-secondary-alpha;
+      } @else if $hue == tertiary {
+        border: solid 0.83rem variables.$color-tertiary-alpha;
+      }
+
+      filter: blur(1.49rem);
+      z-index: 2;
+    }
+
+    & > .layer-3 {
+      @if $hue == primary {
+        border: solid 0.64rem rgba(variables.$color-primary-epsilon, 20%);
+        box-shadow: 0 0 1.94rem variables.$color-primary-gamma, 0 0 0.5rem rgba(variables.$color-primary-delta, 70%);
+      } @else if $hue == secondary {
+        border: solid 0.64rem rgba(variables.$color-secondary-epsilon, 20%);
+        box-shadow: 0 0 1.94rem variables.$color-secondary-gamma, 0 0 0.5rem rgba(variables.$color-secondary-delta, 70%);
+      } @else if $hue == tertiary {
+        border: solid 0.64rem rgba(variables.$color-tertiary-epsilon, 20%);
+        box-shadow: 0 0 1.94rem variables.$color-tertiary-gamma, 0 0 0.5rem rgba(variables.$color-tertiary-delta, 70%);
+      }
+
+      z-index: 3;
+
+      &::before {
+        box-shadow: inset 0 0 0.06rem rgba(#fff, 50%);
+      }
+    }
+
+    & > .layer-4 {
+      @if $hue == primary {
+        border: solid 0.4rem variables.$color-primary-epsilon;
+      } @else if $hue == secondary {
+        border: solid 0.4rem variables.$color-secondary-epsilon;
+      } @else if $hue == tertiary {
+        border: solid 0.4rem variables.$color-tertiary-epsilon;
+      }
+
+      filter: blur(0.1rem);
+      z-index: 4;
+    }
+
+    & > .layer-5 {
+      @if $hue == primary {
+        border: solid 0.2rem #fff;
+      } @else if $hue == secondary {
+        border: solid 0.2rem #fff;
+      } @else if $hue == tertiary {
+        border: solid 0.2rem #fff;
+      }
+
+      filter: blur(0.07rem);
+      z-index: 5;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      & > .layer-1 {
+        border-width: 0.64rem !important;
+      }
+
+      & > .layer-2 {
+        border-width: 0.83rem !important;
+      }
+
+      & > .layer-3 {
+        border-width: 0.64rem !important;
+      }
+
+      & > .layer-4 {
+        border-width: 0.4rem !important;
+      }
+
+      & > .layer-5 {
+        border-width: 0.2rem !important;
+        filter: blur(0.07rem) !important;
+      }
     }
   } @else if $type == text {
     background-color: rgba(variables.$color-neutral-dark, 20%);
@@ -369,6 +598,10 @@
   top: 50%;
   transform: translateY(-50%);
   transition: linear 0.3s;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 1.35rem;
+  }
 }
 
 @mixin text-style-stroke {

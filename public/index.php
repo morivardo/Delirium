@@ -19,29 +19,30 @@
       echo '<script type="text/JavaScript">
               let doc = "home";';
       break;
-    case str_ends_with($request, '/delirium'):
-      echo '<script type="text/JavaScript">
-              let doc = "delirium";';
-      break;
-    case str_ends_with($request, 'accesso'):
+    case str_ends_with($request, '/accesso'):
       echo '<script type="text/JavaScript">
               let doc = "accesso";';
       break;
-    case str_ends_with($request, '/piaceri'):
+    case str_ends_with($request, '/beautyzentrum'):
       echo '<script type="text/JavaScript">
-              let doc = "piaceri";';
+              let doc = "beautyzentrum";';
       break;
     case str_ends_with($request, '/community'):
       echo '<script type="text/JavaScript">
               let doc = "community";';
       break;
+    case str_ends_with($request, '/delirium'):
+      echo '<script type="text/JavaScript">
+              let doc = "delirium";';
+      break;
+    case str_ends_with($request, '/piaceri'):
+      echo '<script type="text/JavaScript">
+              let doc = "piaceri";';
+      break;
+
     case str_ends_with($request, '/scopri'):
       echo '<script type="text/JavaScript">
               let doc = "scopri";';
-      break;
-    case str_ends_with($request, '/beautyzentrum'):
-      echo '<script type="text/JavaScript">
-              let doc = "beautyzentrum";';
       break;
     case str_ends_with($request, '/traumehotel'):
       echo '<script type="text/JavaScript">

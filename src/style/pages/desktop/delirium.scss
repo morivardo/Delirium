@@ -2,11 +2,11 @@
 @use '../../abstracts/mixin.scss';
 
 #delirium {
-  .wrapper {
+  #wrapper {
     background-image: url('/assets/img/desktop/delirium/desktop_delirium_background.svg');
   }
 
-  .slide-0 {
+  .slice-0 {
     background-image: url('/assets/img/desktop/delirium/desktop_delirium_intro.webp');
 
     .container-h1 {
@@ -22,7 +22,7 @@
     }
   }
 
-  .slide-1 {
+  .slice-1 {
     .container-xl {
       display: flex;
       flex-direction: column;
@@ -59,7 +59,7 @@
     }
   }
 
-  .slide-2 {
+  .slice-2 {
     .container-xl {
       display: flex;
       flex-direction: column;
@@ -123,7 +123,7 @@
     }
   }
 
-  .slide-3 {
+  .slice-3 {
     .container-xl {
       display: flex;
       flex-direction: column;
@@ -142,7 +142,7 @@
     }
   }
 
-  .slide-4 {
+  .slice-4 {
     .row {
       height: 29vh;
       margin-bottom: -1.5vh;
@@ -225,7 +225,7 @@
     }
   }
 
-  .slide-5 {
+  .slice-5 {
     .container-xl {
       display: flex;
       flex-direction: column;

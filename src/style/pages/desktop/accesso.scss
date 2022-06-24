@@ -2,10 +2,10 @@
 @use '../../abstracts/mixin.scss';
 
 #accesso {
-  .wrapper {
+  #wrapper {
     background-image: url('/assets/img/desktop/accesso/desktop_accesso_background.svg');
 
-    .slide-0 {
+    .slice-0 {
       background-image: url('/assets/img/desktop/accesso/desktop_accesso_intro.webp');
       position: relative;
 
@@ -21,7 +21,7 @@
       }
     }
 
-    .slide-1 {
+    .slice-1 {
       .row {
         height: 75vh;
         margin: 17vh 0 8vh;
@@ -113,7 +113,7 @@
       }
     }
 
-    .slide-2 {
+    .slice-2 {
       .container-xl {
         height: 100%;
         padding: 0 15% !important;
@@ -268,7 +268,7 @@
       }
     }
 
-    .slide-3 {
+    .slice-3 {
       .container-xl > .row {
         margin: 10vh 0 7vh;
 

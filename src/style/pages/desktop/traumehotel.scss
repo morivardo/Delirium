@@ -2,11 +2,11 @@
 @use '../../abstracts/mixin.scss';
 
 #traumehotel {
-  .wrapper {
+  #wrapper {
     background-image: url('/assets/img/desktop/traumehotel/desktop_thetraumehotel_background.svg');
   }
 
-  .slide-0 {
+  .slice-0 {
     background-image: url('/assets/img/desktop/traumehotel/desktop_traumehotel_intro.webp');
 
     .container-h1 {
@@ -22,7 +22,7 @@
     }
   }
 
-  .slide-1 {
+  .slice-1 {
     .row:first-child {
       margin-top: 26vh;
       position: relative;
@@ -64,7 +64,7 @@
     }
   }
 
-  .slide-2 {
+  .slice-2 {
     .container-xl > .row:first-child {
       flex-wrap: nowrap;
       margin-top: 14vh;
@@ -107,7 +107,7 @@
     }
   }
 
-  .slide-3 {
+  .slice-3 {
     .container-xl {
       .row:first-child {
         margin-top: 33vh;
@@ -221,10 +221,11 @@
     }
   }
 
-  .slide-4 {
+  .slice-4 {
     .container-xl {
       .row:first-child {
         margin-top: 20vh;
+
         .col {
           display: flex;
           justify-content: center;
@@ -318,9 +319,10 @@
     }
   }
 
-  .slide-5 {
+  .slice-5 {
     .container-xl > .row:first-child {
       margin-top: 20vh;
+
       .col {
         display: flex;
         justify-content: center;
@@ -425,7 +427,7 @@
     }
   }
 
-  .slide-6 {
+  .slice-6 {
     .row:first-child {
       height: 13vh;
       margin-top: 20vh;

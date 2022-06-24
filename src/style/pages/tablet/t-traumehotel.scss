@@ -1,0 +1,319 @@
+@use '../../abstracts/mixin.scss';
+@use '../../abstracts/variables.scss';
+
+#t-traumehotel {
+  .intro {
+    position: relative;
+
+    img,
+    picture,
+    source {
+      width: 100%;
+    }
+
+    .container-h1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 75%;
+    }
+
+    h1,
+    span {
+      margin: 0;
+      line-height: 1.5;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .chamber-1 {
+    margin: 20% 0;
+
+    .row:first-child {
+      .col-6:first-of-type {
+        @include mixin.glow-layering(frame, secondary);
+        position: relative;
+      }
+
+      .glow-layer {
+        height: 105%;
+        margin: -5% 0 0 2%;
+        position: absolute;
+        width: 100%;
+      }
+
+      img,
+      picture,
+      source {
+        position: relative;
+        width: 100%;
+        z-index: 10;
+      }
+    }
+
+    .row:nth-child(2) {
+      .col-9 {
+        padding-left: 2rem;
+        z-index: 11;
+
+        h2,
+        span {
+          font-size: 2.7rem;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .row:nth-child(3) {
+      margin-top: calc(5% + 2rem);
+
+      @media only screen and (max-width: 720px) {
+        margin-top: calc(5% + 4rem);
+      }
+    }
+
+    .row:nth-child(4) {
+      margin: 15% 0 35%;
+    }
+  }
+
+  .chamber-2 {
+    margin: 20% 0;
+
+    & > .row:nth-child(2) {
+      @include mixin.glow-layering(frame, tertiary);
+      margin-top: calc(5% + 2rem);
+      padding: 1.5rem;
+      position: relative;
+
+      & > .glow-layer {
+        height: calc(100% - 2rem);
+        position: absolute;
+        width: calc(100% - 2rem);
+      }
+    }
+
+    .col-4 {
+      padding-top: 5rem;
+      padding-bottom: 1rem;
+      text-align: center;
+
+      h4 {
+        font-size: 1.3rem;
+        margin-top: 3rem;
+        position: relative;
+        z-index: 15;
+      }
+
+      p {
+        position: relative;
+        z-index: 15;
+      }
+
+      span {
+        font-size: 4rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .chamber-3 {
+    margin: 20% 0;
+
+    img,
+    picture,
+    source {
+      position: relative;
+      z-index: 7;
+    }
+
+    .row:first-child {
+      margin-top: 2rem;
+
+      .container-h2 {
+        margin-top: 5.5rem;
+      }
+
+      .container-stroke-neon {
+        .stroke-neon,
+        span {
+          font-size: 5.35rem;
+        }
+      }
+    }
+
+    .box {
+      background-color: variables.$color-tertiary-icon-gamma;
+      filter: drop-shadow(0.94rem 0.94rem 0.94rem rgba(#000, 30%));
+      margin: -5rem auto 0;
+      padding: 3rem 4rem 1.5rem;
+      position: relative;
+      text-align: center;
+      width: 60%;
+      z-index: 12;
+
+      h4 {
+        margin-left: -10%;
+        width: 120%;
+      }
+    }
+
+    .row:not(:first-child) .container-neon-strip {
+      margin-top: 10%;
+    }
+
+    .row:nth-child(2) {
+      margin-top: calc(5% + 2.5rem);
+    }
+
+    .row:nth-child(3) {
+      margin-top: 10%;
+
+      img,
+      picture,
+      source {
+        margin-top: -10%;
+      }
+    }
+
+    .row:nth-child(4) {
+      margin-top: 20%;
+
+      img,
+      picture,
+      source {
+        margin-top: -10%;
+      }
+    }
+  }
+
+  .chamber-4 {
+    margin: 20% 0;
+
+    img,
+    picture,
+    source {
+      position: relative;
+      z-index: 7;
+    }
+
+    .row:first-child {
+      margin-top: 2rem;
+
+      .container-h2 {
+        margin-top: 5.5rem;
+      }
+
+      .container-stroke-neon {
+        .stroke-neon,
+        span {
+          font-size: 5.35rem;
+        }
+      }
+    }
+
+    & > .row:nth-child(2) {
+      @include mixin.glow-layering(frame, secondary);
+      margin-top: calc(5% + 2rem);
+      position: relative;
+
+      & > .glow-layer {
+        height: 60%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+
+      .col-11 {
+        column-gap: 2.22rem;
+        display: grid;
+        grid-template-columns:
+          [c1] calc(25% - 1.67rem) [c2] calc(25% - 1.66rem) [c3] calc(25% - 1.66rem) [c4] calc(25% - 1.67rem)
+          [c5];
+        grid-template-rows: [r1] calc(50% - 1.11rem) [r2] calc(50% - 1.11rem) [r3];
+        row-gap: 2.22rem;
+      }
+    }
+
+    .box {
+      background-color: variables.$color-tertiary-icon-gamma;
+      filter: drop-shadow(0.94rem 0.94rem 0.94rem rgba(#000, 30%));
+      padding: 2rem 2.5rem;
+      position: relative;
+      text-align: center;
+      z-index: 12;
+
+      h4 {
+        margin: 0 0 0 -10%;
+        width: 120%;
+      }
+
+      span {
+        font-size: 1.35rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .box-1 {
+      grid-column: c1 / c3;
+      grid-row: r1 / r2;
+    }
+
+    .box-2 {
+      grid-column: c3 / c5;
+      grid-row: r1 / r2;
+    }
+
+    .box-3 {
+      grid-column: c2 / c4;
+      grid-row: r2 / r3;
+    }
+
+    .row:last-child {
+      margin-top: 20%;
+    }
+  }
+
+  .chamber-5 {
+    margin: 30% 0;
+
+    img,
+    picture,
+    source {
+      position: relative;
+      z-index: 7;
+    }
+
+    .row:first-child {
+      margin-top: 2rem;
+
+      .container-h2 {
+        margin-top: 5.5rem;
+      }
+
+      .container-stroke-neon {
+        .stroke-neon,
+        span {
+          font-size: 5.35rem;
+        }
+      }
+    }
+
+    .row:nth-child(2) {
+      margin-top: 10%;
+    }
+
+    .row:last-child {
+      margin: 15% 0 50%;
+    }
+  }
+}

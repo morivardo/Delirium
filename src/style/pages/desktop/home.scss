@@ -2,15 +2,15 @@
 @use '../../abstracts/mixin.scss';
 
 #home {
-  .wrapper {
+  #wrapper {
     background-image: url('/assets/img/desktop/home/desktop_home_background.svg');
   }
 
-  .slide-0 {
+  .slice-0 {
     background-image: url('/assets/img/desktop/home/desktop_home_intro.gif');
   }
 
-  .slide-1 {
+  .slice-1 {
     .row {
       height: 29vh;
       margin: 0;
@@ -102,7 +102,7 @@
     }
   }
 
-  .slide-2 {
+  .slice-2 {
     .row {
       .col-6 {
         padding-top: 1rem;
@@ -212,7 +212,7 @@
     }
   }
 
-  .slide-3 {
+  .slice-3 {
     .row {
       height: 100%;
       padding: 12vh 0;

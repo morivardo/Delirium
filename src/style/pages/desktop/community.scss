@@ -2,11 +2,11 @@
 @use '../../abstracts/mixin.scss';
 
 #community {
-  .wrapper {
+  #wrapper {
     background-image: url('/assets/img/desktop/community/desktop_community_background.svg');
   }
 
-  .slide-0 {
+  .slice-0 {
     background-image: url('/assets/img/desktop/community/desktop_community_intro.webp');
     position: relative;
 
@@ -23,7 +23,7 @@
     }
   }
 
-  .slide-1 {
+  .slice-1 {
     .container-xl {
       display: flex;
       flex-direction: column;
@@ -49,7 +49,7 @@
     }
   }
 
-  .slide-2 {
+  .slice-2 {
     .container-xl {
       display: flex;
       flex-direction: column;
@@ -103,7 +103,7 @@
     }
   }
 
-  .slide-3 {
+  .slice-3 {
     .container-xl {
       display: flex;
       flex-direction: column;
@@ -197,7 +197,7 @@
     }
   }
 
-  .slide-4 {
+  .slice-4 {
     .container-xl {
       display: flex;
       flex-direction: column;

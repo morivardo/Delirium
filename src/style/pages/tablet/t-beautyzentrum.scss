@@ -1,0 +1,358 @@
+@use '../../abstracts/variables.scss';
+@use '../../abstracts/mixin.scss';
+
+#t-beautyzentrum {
+  .intro {
+    position: relative;
+
+    img,
+    picture,
+    source {
+      width: 100%;
+    }
+
+    .container-h1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 75%;
+    }
+
+    h1,
+    span {
+      margin: 0;
+      line-height: 1.5;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .chamber-1 {
+    margin: 20% 0;
+
+    .row:first-child {
+      .col-6:first-of-type {
+        @include mixin.glow-layering(frame, secondary);
+        position: relative;
+      }
+
+      .glow-layer {
+        height: 105%;
+        margin: -5% 0 0 2%;
+        position: absolute;
+        width: 100%;
+      }
+
+      img,
+      picture,
+      source {
+        position: relative;
+        width: 100%;
+        z-index: 10;
+      }
+    }
+
+    .row:nth-child(2) {
+      .col-10 {
+        margin-left: -2rem;
+        z-index: 11;
+
+        h2,
+        span {
+          font-size: 2.7rem;
+          line-height: 1.2;
+        }
+      }
+    }
+
+    .row:nth-child(3) {
+      margin-top: calc(5% + 2rem);
+
+      @media only screen and (max-width: 720px) {
+        margin-top: calc(5% + 4rem);
+      }
+    }
+  }
+
+  .chamber-2 {
+    margin: 20% 0;
+
+    .row {
+      margin-bottom: 5%;
+    }
+
+    .row:first-child .col-7:nth-child(2) {
+      margin: 5% 0 0 -25%;
+    }
+
+    .row:nth-child(2) .col-6 {
+      margin: 5% 0 0 10%;
+    }
+
+    .row:nth-child(2) .col-5 {
+      margin-left: -20%;
+    }
+  }
+
+  .chamber-3 {
+    margin: 20% 0;
+
+    & > .row:nth-child(2) {
+      @include mixin.glow-layering(frame, tertiary);
+      margin-top: calc(5% + 2rem);
+      padding: 1rem;
+      position: relative;
+
+      & > .glow-layer {
+        height: calc(100% - 2rem);
+        position: absolute;
+        width: calc(100% - 2rem);
+      }
+    }
+
+    .col-12 {
+      padding: 1rem;
+
+      .row {
+        padding: calc(5% + 2.5rem) 10% 5%;
+
+        &:nth-child(2) {
+          margin: -10% 0;
+          padding: 0 10%;
+        }
+      }
+    }
+
+    .col-6 {
+      text-align: center;
+
+      .container-stroke-neon {
+        margin-bottom: 2.5rem;
+      }
+
+      p {
+        padding: 0 12%;
+      }
+
+      span {
+        font-size: 4rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .chamber-4 {
+    margin: 20% 0;
+
+    img,
+    picture,
+    source {
+      position: relative;
+      z-index: 7;
+    }
+
+    .row:first-child {
+      margin-top: 2rem;
+
+      .container-h2 {
+        margin-top: 5.5rem;
+      }
+
+      .container-stroke-neon {
+        .stroke-neon,
+        span {
+          font-size: 5.35rem;
+        }
+      }
+    }
+
+    .box {
+      background-color: variables.$color-tertiary-icon-gamma;
+      filter: drop-shadow(0.94rem 0.94rem 0.94rem rgba(#000, 30%));
+      margin: -5rem auto 0;
+      padding: 3rem 4rem 1.5rem;
+      position: relative;
+      text-align: center;
+      width: 60%;
+      z-index: 12;
+
+      h4 {
+        margin-left: -10%;
+        width: 120%;
+      }
+    }
+
+    .row:not(:first-child) .container-neon-strip {
+      margin-top: 10%;
+    }
+
+    .row:nth-child(2) {
+      margin-top: calc(5% + 2.5rem);
+    }
+
+    .row:nth-child(3) {
+      margin-top: 10%;
+
+      img,
+      picture,
+      source {
+        margin-top: -10%;
+      }
+    }
+
+    .row:nth-child(4) {
+      margin-top: 20%;
+
+      img,
+      picture,
+      source {
+        margin-top: -10%;
+      }
+    }
+  }
+
+  .chamber-5 {
+    margin: 20% 0;
+
+    img,
+    picture,
+    source {
+      position: relative;
+      z-index: 7;
+    }
+
+    .row:first-child {
+      margin-top: 2rem;
+
+      .container-h2 {
+        margin-top: 5.5rem;
+      }
+
+      .container-stroke-neon {
+        .stroke-neon,
+        span {
+          font-size: 5.35rem;
+        }
+      }
+    }
+
+    & > .row:nth-child(2) {
+      @include mixin.glow-layering(frame, secondary);
+      margin-top: calc(5% + 2rem);
+      position: relative;
+
+      & > .glow-layer {
+        height: 60%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+
+      .col-11 {
+        column-gap: 1.2rem;
+        display: grid;
+        grid-template-columns: [c1] calc(50% - 0.6rem) [c2] calc(50% - 0.6rem) [c3];
+        grid-template-rows: [r1] calc(50% - 0.6rem) [r2] calc(50% - 0.6rem) [r3];
+        row-gap: 1.2rem;
+      }
+
+      .box-1 {
+        grid-column: c1 / c2;
+        grid-row: r1 / r2;
+      }
+
+      .box-2 {
+        grid-column: c2 / c3;
+        grid-row: r1 / r2;
+      }
+
+      .box-3 {
+        grid-column: c1 / c2;
+        grid-row: r2 / r3;
+      }
+
+      .box-4 {
+        grid-column: c2 / c3;
+        grid-row: r2 / r3;
+      }
+
+      .box {
+        background-color: variables.$color-tertiary-icon-gamma;
+        filter: drop-shadow(0.94rem 0.94rem 0.94rem rgba(#000, 30%));
+        padding: 4.5rem 3rem;
+        position: relative;
+        text-align: center;
+        z-index: 12;
+
+        h4 {
+          margin-left: -10%;
+          width: 120%;
+        }
+      }
+    }
+
+    .row:last-child {
+      margin-top: 20%;
+    }
+  }
+
+  .chamber-6 {
+    margin: 30% 0;
+
+    img,
+    picture,
+    source {
+      position: relative;
+      z-index: 7;
+    }
+
+    .row:first-child {
+      margin-top: 2rem;
+
+      .container-h2 {
+        margin-top: 5.5rem;
+      }
+
+      .container-stroke-neon {
+        .stroke-neon,
+        span {
+          font-size: 5.35rem;
+        }
+      }
+    }
+
+    .row:nth-child(2) {
+      margin: 20% 0 0;
+
+      .col-6 {
+        margin-right: -20%;
+
+        img,
+        picture,
+        source {
+          z-index: 15;
+        }
+      }
+
+      .col-7 {
+        @include mixin.glow-layering(frame, primary);
+        position: relative;
+
+        .glow-layer {
+          height: 130%;
+          margin-top: -10%;
+          position: absolute;
+          width: 100%;
+        }
+      }
+    }
+
+    .row:nth-child(3) {
+      margin: -10% 0 30%;
+    }
+  }
+}

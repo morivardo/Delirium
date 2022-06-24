@@ -2,11 +2,11 @@
 @use '../../abstracts/mixin.scss';
 
 #piaceri {
-  .wrapper {
+  #wrapper {
     background-image: url('/assets/img/desktop/piaceri/desktop_piaceri_background.svg');
   }
 
-  .slide-0 {
+  .slice-0 {
     background-image: url('/assets/img/desktop/piaceri/desktop_piaceri_intro.webp');
 
     .container-h1 {
@@ -22,7 +22,7 @@
     }
   }
 
-  .slide-1 {
+  .slice-1 {
     .container-xl {
       padding: 44vh 13vw !important;
 
@@ -32,7 +32,7 @@
     }
   }
 
-  .slide-2 {
+  .slice-2 {
     .container-xl {
       padding: 4.9vh 3.5vw !important;
 
@@ -107,111 +107,115 @@
       }
     }
   }
-}
 
-img,
-picture,
-source {
-  width: 100%;
-}
-
-.modal-dialog {
-  height: 85vh;
-  width: 54vw;
-}
-
-div[class^='modal-layer'] {
-  height: 85vh;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 54vw;
-}
-
-.modal-layer- {
-  &0 {
-    border: solid 0.49rem #fff;
-    filter: blur(0.16rem);
-    z-index: 3;
+  img,
+  picture,
+  source {
+    width: 100%;
   }
 
-  &1 {
-    border: solid 0.97rem variables.$color-secondary-epsilon;
-    filter: blur(0.24rem);
-    z-index: 4;
+  .modal-dialog {
+    max-width: 54vw;
+    width: 54vw;
   }
 
-  &2 {
-    border: solid 1.58rem rgba(variables.$color-secondary-epsilon, 20%);
-    filter: drop-shadow(0 3.64rem 4.73rem variables.$color-secondary-gamma)
-      drop-shadow(0 1.58rem 1.21rem rgba(variables.$color-secondary-delta, 70%));
-    z-index: 5;
+  div[class^='modal-layer'] {
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 54vw;
+  }
 
-    &::before {
-      filter: drop-shadow(inset -0.16rem 0.32rem 0.16rem rgba(#fff, 50%));
+  .modal-layer- {
+    &0 {
+      border: solid 0.49rem #fff;
+      filter: blur(0.16rem);
+      z-index: 3;
+    }
+
+    &1 {
+      border: solid 0.97rem variables.$color-secondary-epsilon;
+      filter: blur(0.24rem);
+      z-index: 4;
+    }
+
+    &2 {
+      border: solid 1.58rem rgba(variables.$color-secondary-epsilon, 20%);
+      filter: drop-shadow(0 3.64rem 4.73rem variables.$color-secondary-gamma)
+        drop-shadow(0 1.58rem 1.21rem rgba(variables.$color-secondary-delta, 70%));
+      z-index: 5;
+
+      &::before {
+        filter: drop-shadow(inset -0.16rem 0.32rem 0.16rem rgba(#fff, 50%));
+      }
+    }
+
+    &3 {
+      border: solid 2.06rem variables.$color-secondary-alpha;
+      filter: blur(3.64rem);
+      z-index: 6;
+    }
+
+    &4 {
+      border: solid 1.58rem variables.$color-secondary-beta;
+      filter: blur(10.92rem);
+      z-index: 7;
+    }
+
+    &5 {
+      background-color: rgba(variables.$color-secondary-zeta, 30%);
+      border-radius: 40%;
+      filter: blur(10.92rem);
+      z-index: 8;
     }
   }
 
-  &3 {
-    border: solid 2.06rem variables.$color-secondary-alpha;
-    filter: blur(3.64rem);
-    z-index: 6;
-  }
+  .modal-body {
+    background-color: variables.$color-neutral-dark;
+    height: fit-content;
+    padding: 0 10%;
+    width: 54vw;
+    z-index: 9;
 
-  &4 {
-    border: solid 1.58rem variables.$color-secondary-beta;
-    filter: blur(10.92rem);
-    z-index: 7;
-  }
+    .row {
+      &:first-child {
+        margin: 2rem -10% 3.5rem 0;
 
-  &5 {
-    background-color: rgba(variables.$color-secondary-zeta, 30%);
-    border-radius: 40%;
-    filter: blur(10.92rem);
-    z-index: 8;
-  }
-}
+        .container-btn-neon {
+          height: 2.8rem;
+          width: 2.8rem;
 
-.modal-body {
-  background-color: variables.$color-neutral-dark;
-  height: 85vh;
-  padding: 0 10%;
-  width: 54vw;
-  z-index: 9;
+          span {
+            height: 100%;
+            width: 100%;
+          }
+        }
 
-  .row {
-    &:first-child {
-      margin: 2rem -10% 3.5rem 0;
-
-      .container-btn-neon {
-        height: 2.8rem;
-        width: 2.8rem;
-
-        span {
+        .btn-neon {
+          background: none;
           height: 100%;
           width: 100%;
         }
       }
 
-      .btn-neon {
-        background: none;
-        height: 100%;
-        width: 100%;
+      &:nth-child(2) {
+        margin-bottom: 3rem;
       }
-    }
 
-    &:nth-child(2) {
-      margin-bottom: 3rem;
-    }
+      &:nth-child(3) {
+        margin-bottom: 1.5rem;
+      }
 
-    &:nth-child(3) {
-      margin-bottom: 1.5rem;
-    }
+      &:nth-child(4) {
+        margin: 0;
+        padding-bottom: 0.5rem;
+      }
 
-    &:nth-child(4) {
-      margin-bottom: 3.5rem;
-      padding-bottom: 0.5rem;
+      &:last-child {
+        margin: 3.5rem 0;
+      }
     }
   }
 }

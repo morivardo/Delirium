@@ -24,7 +24,14 @@ function compileScss() {
 
 // Minify .js files
 function minJs() {
-  return src('src/script/*.js').pipe(terser()).pipe(dest('public/assets/script'));
+  return src('src/script/*.js')
+    .pipe(
+      terser({
+        ecma: 2016,
+        compress: false,
+      }),
+    )
+    .pipe(dest('public/assets/script'));
 }
 
 // Optimize images
@@ -60,10 +67,7 @@ function optimizeImg() {
 
 // Convert images to .webp
 function webpImg() {
-  return src('public/assets/img/**/**/*.{jpg,png}')
-    .pipe(changed('public/assets/img'))
-    .pipe(webp())
-    .pipe(dest('public/assets/img'));
+  return src('public/assets/img/**/**/*.{jpg,png}').pipe(webp()).pipe(dest('public/assets/img'));
 }
 
 function copyToFront() {
@@ -99,7 +103,14 @@ function startServer() {
 // Checks and executes tasks automatically
 function watchTask() {
   watch(
-    ['src/style/main.scss', 'src/style/layouts/**', 'src/style/abstracts/**', 'src/style/pages/**'],
+    [
+      'src/style/main.scss',
+      'src/style/layouts/**',
+      'src/style/abstracts/**',
+      'src/style/pages/desktop/**',
+      'src/style/pages/mobile/**',
+      'src/style/pages/tablet/**',
+    ],
     series(compileScss, browserSyncReload),
   );
   watch('src/script/*.js', series(minJs, browserSyncReload));

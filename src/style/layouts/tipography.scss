@@ -2,7 +2,7 @@
 @use '../abstracts/mixin.scss';
 
 html {
-  font-size: 100%;
+  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -24,6 +24,7 @@ body {
 .btn-neon {
   @include mixin.text-style-cta;
 
+  background: none;
   border: solid 1px #fff;
   z-index: 10;
   -webkit-font-smoothing: antialiased;
@@ -53,9 +54,15 @@ body {
 }
 
 .container-check-neon {
-  @include mixin.glow-layering(box, tertiary);
-
   position: relative;
+
+  &.container-primary-color {
+    @include mixin.glow-layering(box, primary);
+  }
+
+  &.container-tertiary-color {
+    @include mixin.glow-layering(box, tertiary);
+  }
 
   input[type='checkbox'] {
     border: solid 1px #fff;
@@ -65,7 +72,7 @@ body {
     height: 3rem;
     margin-top: 0;
     place-content: center;
-    z-index: 7;
+    z-index: 10;
 
     &::before {
       box-shadow: inset 2rem 2rem #fff;
@@ -297,6 +304,27 @@ p {
   -webkit-font-smoothing: antialiased;
 }
 
+.container-carousel {
+  color: transparent;
+  display: block;
+  position: relative;
+  &.container-primary-color {
+    @include mixin.glow-layering(carousel, primary);
+
+    &:hover {
+      @include mixin.glow-layering(carousel, tertiary);
+    }
+  }
+
+  &.container-secondary-color {
+    @include mixin.glow-layering(carousel, secondary);
+
+    &:hover {
+      @include mixin.glow-layering(carousel, primary);
+    }
+  }
+}
+
 .container-icon {
   color: transparent;
   display: block;
@@ -328,25 +356,26 @@ p {
   position: relative;
 
   &::before {
-    background-color: rgba(variables.$color-neutral-dark, 50%);
+    background-color: rgba(variables.$color-neutral-dark, 60%);
     content: '';
-    filter: blur(3.25rem);
+    filter: blur(3rem);
     height: calc(100% + 2rem + 2em);
-    left: 0;
+    left: 50%;
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: calc(100% + 3em);
-    z-index: 1;
+    z-index: 3;
   }
 
   div[class^='container-h'] {
     display: inline-block;
-    z-index: 2;
+    z-index: 4;
   }
 
   p {
     position: relative;
-    z-index: 2;
+    z-index: 4;
   }
 }
 
@@ -373,5 +402,36 @@ p {
 
   &-input {
     margin-bottom: calc(1.5rem + 0.5em);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+
+  h1,
+  .container-h1 span {
+    font-size: 4.5rem;
+  }
+
+  h2,
+  .container-h2 span {
+    font-size: 2rem;
+  }
+
+  h3,
+  .container-h3 span {
+    font-size: 1.35rem;
+  }
+
+  h4,
+  .container-h4 span {
+    font-size: 1.35rem;
+  }
+
+  .container-stroke-neon.container-primary-color .glow-layer,
+  .container-stroke-neon.container-primary-color .stroke-neon {
+    font-size: 1.35rem;
   }
 }
