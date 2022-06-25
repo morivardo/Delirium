@@ -428,13 +428,13 @@
     & > .layer-3 {
       @if $hue == primary {
         border: solid 0.64rem rgba(variables.$color-primary-epsilon, 20%);
-        box-shadow: 0 0 1.94rem variables.$color-primary-gamma, 0 0 0.5rem rgba(variables.$color-primary-delta, 70%);
+        box-shadow: 0 0 1.94rem variables.$color-primary-gamma, 0 0 0.6rem rgba(variables.$color-primary-delta, 70%);
       } @else if $hue == secondary {
         border: solid 0.64rem rgba(variables.$color-secondary-epsilon, 20%);
-        box-shadow: 0 0 1.94rem variables.$color-secondary-gamma, 0 0 0.5rem rgba(variables.$color-secondary-delta, 70%);
+        box-shadow: 0 0 1.94rem variables.$color-secondary-gamma, 0 0 0.6rem rgba(variables.$color-secondary-delta, 70%);
       } @else if $hue == tertiary {
         border: solid 0.64rem rgba(variables.$color-tertiary-epsilon, 20%);
-        box-shadow: 0 0 1.94rem variables.$color-tertiary-gamma, 0 0 0.5rem rgba(variables.$color-tertiary-delta, 70%);
+        box-shadow: 0 0 1.94rem variables.$color-tertiary-gamma, 0 0 0.6rem rgba(variables.$color-tertiary-delta, 70%);
       }
 
       z-index: 3;
@@ -453,7 +453,7 @@
         border: solid 0.4rem variables.$color-tertiary-epsilon;
       }
 
-      filter: blur(0.1rem);
+      filter: blur(0.4rem);
       z-index: 4;
     }
 
@@ -468,29 +468,6 @@
 
       filter: blur(0.07rem);
       z-index: 5;
-    }
-
-    @media only screen and (max-width: 1200px) {
-      & > .layer-1 {
-        border-width: 0.64rem !important;
-      }
-
-      & > .layer-2 {
-        border-width: 0.83rem !important;
-      }
-
-      & > .layer-3 {
-        border-width: 0.64rem !important;
-      }
-
-      & > .layer-4 {
-        border-width: 0.4rem !important;
-      }
-
-      & > .layer-5 {
-        border-width: 0.2rem !important;
-        filter: blur(0.07rem) !important;
-      }
     }
   } @else if $type == text {
     background-color: rgba(variables.$color-neutral-dark, 20%);
@@ -599,8 +576,12 @@
   transform: translateY(-50%);
   transition: linear 0.3s;
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (min-width: 601px) and (max-width: 1200px) {
     font-size: 1.35rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1rem;
   }
 }
 

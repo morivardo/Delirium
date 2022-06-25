@@ -1,0 +1,185 @@
+@use '../../abstracts/variables.scss';
+
+#m-piaceri {
+  .intro {
+    position: relative;
+
+    img,
+    picture,
+    source {
+      width: 100%;
+    }
+
+    .container-h1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+    }
+
+    h1,
+    span {
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .chamber-1 {
+    margin: calc(15% + 3rem) 0 30%;
+
+    .row:first-child {
+      h2,
+      span {
+        left: 50%;
+        line-height: 1.5;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+
+      p {
+        line-height: 1.5;
+        margin-top: 4rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .chamber-2 {
+    margin: 15% 0 40%;
+  }
+
+  .modal-dialog {
+    max-width: 85vw;
+    width: 85vw;
+  }
+
+  div[class^='modal-layer'] {
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 85vw;
+  }
+
+  .modal-layer- {
+    &0 {
+      border: solid 0.49rem #fff;
+      filter: blur(0.16rem);
+      z-index: 3;
+    }
+
+    &1 {
+      border: solid 0.97rem variables.$color-secondary-epsilon;
+      filter: blur(0.24rem);
+      z-index: 4;
+    }
+
+    &2 {
+      border: solid 1.58rem rgba(variables.$color-secondary-epsilon, 20%);
+      filter: drop-shadow(0 3.64rem 4.73rem variables.$color-secondary-gamma)
+        drop-shadow(0 1.58rem 1.21rem rgba(variables.$color-secondary-delta, 70%));
+      z-index: 5;
+
+      &::before {
+        filter: drop-shadow(inset -0.16rem 0.32rem 0.16rem rgba(#fff, 50%));
+      }
+    }
+
+    &3 {
+      border: solid 2.06rem variables.$color-secondary-alpha;
+      filter: blur(3.64rem);
+      z-index: 6;
+    }
+
+    &4 {
+      border: solid 1.58rem variables.$color-secondary-beta;
+      filter: blur(10.92rem);
+      z-index: 7;
+    }
+
+    &5 {
+      background-color: rgba(variables.$color-secondary-zeta, 30%);
+      border-radius: 40%;
+      filter: blur(10.92rem);
+      z-index: 8;
+    }
+  }
+
+  .modal-body {
+    background-color: variables.$color-neutral-dark;
+    height: fit-content;
+    padding: 0 5%;
+    width: 85vw;
+    z-index: 9;
+
+    .row:first-child {
+      margin: 1rem 0 2rem;
+
+      .container-btn-neon {
+        margin-right: 0.5rem;
+        height: 1.6rem;
+        width: 1.6rem;
+
+        .btn-neon,
+        span {
+          align-content: center;
+          height: 100%;
+          line-height: initial;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+        }
+
+        .btn-neon {
+          background: none;
+        }
+      }
+    }
+
+    .row:nth-child(2) {
+      h2,
+      span {
+        line-height: 1.2;
+      }
+
+      .sibling-h2 {
+        margin-top: 1.57rem;
+
+        @media only screen and (max-width: 280px) {
+          margin-top: 2.27rem;
+        }
+      }
+    }
+
+    .row:nth-child(3) {
+      margin: 1rem 0 1rem;
+
+      .col {
+        padding: 0;
+      }
+
+      .col-6:first-child {
+        padding: 0 0.5rem 0 0;
+      }
+
+      .col-6:last-child {
+        padding: 0 0 0 0.5rem;
+      }
+    }
+
+    .row:last-child {
+      margin: 3rem 0;
+    }
+  }
+
+  #beauty-modal .row:nth-child(2) .sibling-h2 {
+    margin-top: 2.27rem;
+  }
+
+  #freunde-modal .row:nth-child(2) .sibling-h2 {
+    @media only screen and (max-width: 290px) {
+      margin-top: 2.27rem;
+    }
+  }
+}

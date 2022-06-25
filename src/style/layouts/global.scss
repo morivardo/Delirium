@@ -58,7 +58,11 @@ picture {
 }
 
 .container-lg {
-  margin-top: 8rem;
+  margin-top: 7rem;
+}
+
+.container-sm {
+  margin-top: 6rem;
 }
 
 .slideshow-container {
@@ -77,7 +81,7 @@ picture {
 
   .slideshow-item {
     display: none;
-    left: 25%;
+    left: 28.5%;
     position: absolute;
     transition: all 750ms ease;
     width: 50%;
@@ -129,10 +133,30 @@ picture {
 
   #slideshow-prev {
     left: 5%;
+
+    svg {
+      height: 70px;
+      width: 47px;
+
+      @media only screen and (max-width: 600px) {
+        height: 29px;
+        width: 20px;
+      }
+    }
   }
 
   #slideshow-next {
     right: 5%;
+
+    svg {
+      height: 70px;
+      width: 47px;
+
+      @media only screen and (max-width: 600px) {
+        height: 29px;
+        width: 20px;
+      }
+    }
   }
 }
 
@@ -142,7 +166,7 @@ picture {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  left: 50%;
+  left: 53.5%;
   margin-top: 3rem;
   position: absolute;
   transform: translateX(-50%);
@@ -155,16 +179,21 @@ picture {
   }
 
   .container-btn-neon {
-    height: 1.3rem;
-    left: 25%;
     overflow: visible;
-    width: 1.3rem;
 
     .glow-layer {
       border-radius: 50%;
       height: 1.3rem;
+      left: 50%;
       overflow: visible;
+      top: 50%;
+      transform: translate(-50%, -50%);
       width: 1.3rem;
+
+      @media only screen and (max-width: 600px) {
+        height: 1rem;
+        width: 1rem;
+      }
     }
   }
 }
@@ -184,7 +213,8 @@ picture {
     @include mixin.glow-layering(strip, tertiary);
   }
 
-  .glow-layer {
+  .glow-layer,
+  .neon-strip {
     bottom: 0;
     margin: 0 0 0 -10%;
     position: absolute;

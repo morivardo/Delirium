@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/style/main.css" />
   </head>
 
-  <body id="delirium">
+  <body id="m-delirium">
     <header>
       <nav>
         <div id="menu-toggle">
@@ -53,252 +53,406 @@
     </header>
 
     <main>
-      <section class="intro">
-        <h1 class="secondary-color">delirium</h1>
-      </section>
-      <section>
-        <div class="row justify-content-start">
-          <div class="col">
-            <h2 class="secondary-color>">la città</h2>
-            <p class="sibling-h2">
-              Una città che non dorme mai: tutti i servizi sono disponibili 24 ore su 24, 7 giorni su 7.
-            </p>
+      <div class="container-sm gx-3">
+        <section class="intro">
+          <picture>
+            <source srcset="/assets/img/mobile/delirium/mobile_delirium_intro.webp" type="image/webp" />
+            <img
+              src="/assets/img/mobile/delirium/mobile_delirium_intro.jpg"
+              alt="Locale in stile moderno, con arredi bianchi e neon rosa"
+              loading="lazy"
+            />
+          </picture>
+          <h1 class="secondary-color">delirium</h1>
+        </section>
+        <section class="chamber-1">
+          <div class="row justify-content-start">
+            <div class="col">
+              <h2 class="secondary-color">la città</h2>
+              <p class="sibling-h2">
+                Una città che non dorme mai: tutti i servizi sono disponibili 24 ore su 24, 7 giorni su 7.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-11">
-            <picture>
-              <source srcset="/assets/img/mobile/delirium/mobile_delirium_citta_1.webp" type="image/webp" />
-              <img
-                src="/assets/img/mobile/delirium/mobile_delirium_citta_1.jpg"
-                alt="Gruppo di persone si avvicina ad una sfera luminosa"
-                loading="lazy"
-              />
-            </picture>
+          <div class="row justify-content-center">
+            <div class="col-11">
+              <picture>
+                <source srcset="/assets/img/mobile/delirium/mobile_delirium_citta_1.webp" type="image/webp" />
+                <img
+                  src="/assets/img/mobile/delirium/mobile_delirium_citta_1.jpg"
+                  alt="Gruppo di persone si avvicina ad una sfera luminosa"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
-        </div>
-        <div class="row justify-content-start">
-          <div class="col-8">
-            <picture>
-              <source srcset="/assets/img/mobile/delirium/mobile_delirium_citta_2.webp" type="image/webp" />
-              <img
-                src="/assets/img/mobile/delirium/mobile_delirium_citta_2.jpg"
-                alt="Grattacielo con luci rosa"
-                loading="lazy"
-              />
-            </picture>
+          <div class="row justify-content-start">
+            <div class="col-9">
+              <picture>
+                <source srcset="/assets/img/mobile/delirium/mobile_delirium_citta_2.webp" type="image/webp" />
+                <img
+                  src="/assets/img/mobile/delirium/mobile_delirium_citta_2.jpg"
+                  alt="Grattacielo con luci rosa"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
-        </div>
-        <div class="row justify-content-end">
-          <div class="col-4">
-            <picture>
-              <source srcset="/assets/img/mobile/delirium/mobile_delirium_citta_3.webp" type="image/webp" />
-              <img
-                src="/assets/img/mobile/delirium/mobile_delirium_citta_3.jpg"
-                alt="Grattacielo con luci rosa"
-                loading="lazy"
-              />
-            </picture>
+          <div class="row justify-content-end">
+            <div class="col-5">
+              <picture>
+                <source srcset="/assets/img/mobile/delirium/mobile_delirium_citta_3.webp" type="image/webp" />
+                <img
+                  src="/assets/img/mobile/delirium/mobile_delirium_citta_3.jpg"
+                  alt="Grattacielo con luci rosa"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div class="row justify-content-start">
-          <div class="col">
-            <h2 class="secondary-color">quart i er i</h2>
+        </section>
+        <section class="chamber-2">
+          <div class="row justify-content-start">
+            <div class="col">
+              <h2 class="secondary-color">quart i er i</h2>
+            </div>
           </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div id="districts-carousel" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#districts-carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#districts-carousel" data-slide-to="1"></li>
-                <li data-target="#districts-carousel" data-slide-to="2"></li>
-                <li data-target="#districts-carousel" data-slide-to="3"></li>
-                <li data-target="#districts-carousel" data-slide-to="4"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="card">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div id="districts-carousel" class="slideshow-container">
+                <div id="slideshow-wrapper">
+                  <div id="slideshow-prev" class="container-carousel container-primary-color slideshow-button">
+                    <svg
+                      class="glow-layer icon"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="47 0 47 70 0 35 47 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-0"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="47 0 47 70 0 35 47 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-1"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      stroke-linecap="square"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="47 0 47 70 0 35 47 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-2"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      stroke-linecap="square"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="47 0 47 70 0 35 47 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-3"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      stroke-linecap="square"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="47 0 47 70 0 35 47 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-4"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      stroke-linecap="square"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="47 0 47 70 0 35 47 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-5"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      stroke-linecap="square"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="47 0 47 70 0 35 47 0"></polygon>
+                    </svg>
+                  </div>
+                  <div id="c1" class="slideshow-item active">
                     <a class="btn-neon" href="#">n02-gravity</a>
                     <picture>
-                      <source srcset="/assets/img/mobile/delirium/mobile_delirium_no2gravity.webp" type="image/webp" />
+                      <source srcset="/assets/img/mobile/delirium/mobile_delirium_quartieri_1.webp" type="image/webp" />
                       <img
-                        src="/assets/img/mobile/delirium/mobile_delirium_no2gravity.jpg"
+                        src="/assets/img/mobile/delirium/mobile_delirium_quartieri_1.jpg"
                         alt="Quartiere con palazzi che sfidano la fisica"
                         loading="lazy"
                       />
                     </picture>
                   </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="card">
+                  <div id="c2" class="slideshow-item following">
                     <a class="btn-neon" href="#">wom headquarters</a>
                     <picture>
-                      <source srcset="/assets/img/mobile/delirium/mobile_delirium_headquarter.webp" type="image/webp" />
+                      <source srcset="/assets/img/mobile/delirium/mobile_delirium_quartieri_2.webp" type="image/webp" />
                       <img
-                        src="/assets/img/mobile/delirium/mobile_delirium_headquarter.jpg"
+                        src="/assets/img/mobile/delirium/mobile_delirium_quartieri_2.jpg"
                         alt="Quartiere con tunnel che connettono i palazzi fra loro"
                         loading="lazy"
                       />
                     </picture>
                   </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="card">
+                  <div id="c3" class="slideshow-item">
                     <a class="btn-neon" href="#">asianeon</a>
                     <picture>
-                      <source srcset="/assets/img/mobile/delirium/mobile_delirium_asianeon.webp" type="image/webp" />
+                      <source srcset="/assets/img/mobile/delirium/mobile_delirium_quartieri_3.webp" type="image/webp" />
                       <img
-                        src="/assets/img/mobile/delirium/mobile_delirium_asianeon.jpg"
+                        src="/assets/img/mobile/delirium/mobile_delirium_quartieri_3.jpg"
                         alt="Quartiere in tipico stile asiatico ma con luci neon"
                         loading="lazy"
                       />
                     </picture>
                   </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="card">
+                  <div id="c4" class="slideshow-item">
                     <a class="btn-neon" href="#">wall street</a>
                     <picture>
-                      <source srcset="/assets/img/mobile/delirium/mobile_delirium_wallstreet.webp" type="image/webp" />
+                      <source srcset="/assets/img/mobile/delirium/mobile_delirium_quartieri_4.webp" type="image/webp" />
                       <img
-                        src="/assets/img/mobile/delirium/mobile_delirium_wallstreet.jpg"
+                        src="/assets/img/mobile/delirium/mobile_delirium_quartieri_4.jpg"
                         alt="Grattacielo con luci blu"
                         loading="lazy"
                       />
                     </picture>
                   </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="card">
+                  <div id="c5" class="slideshow-item previous">
                     <a class="btn-neon" href="#">harajuku</a>
                     <picture>
-                      <source srcset="/assets/img/mobile/delirium/mobile_delirium_harajuku.webp" type="image/webp" />
+                      <source srcset="/assets/img/mobile/delirium/mobile_delirium_quartieri_5.webp" type="image/webp" />
                       <img
-                        src="/assets/img/mobile/delirium/mobile_delirium_harajuku.jpg"
+                        src="/assets/img/mobile/delirium/mobile_delirium_quartieri_5.jpg"
                         alt="Entrata di un locale illuminata a neon e decorata con vari cartelli"
                         loading="lazy"
                       />
                     </picture>
                   </div>
+                  <div id="slideshow-next" class="container-carousel container-secondary-color slideshow-button">
+                    <svg
+                      class="glow-layer icon"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="0 0 0 70 47 35 0 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-0"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="0 0 0 70 47 35 0 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-1"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      stroke-linecap="square"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="0 0 0 70 47 35 0 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-2"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      stroke-linecap="square"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="0 0 0 70 47 35 0 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-3"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      stroke-linecap="square"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="0 0 0 70 47 35 0 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-4"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      stroke-linecap="square"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="0 0 0 70 47 35 0 0"></polygon>
+                    </svg>
+                    <svg
+                      class="glow-layer icon layer-5"
+                      width="47"
+                      height="70"
+                      aria-hidden="true"
+                      focusable="false"
+                      role="img"
+                      stroke-linecap="square"
+                      viewBox="0 0 47 70"
+                    >
+                      <polygon points="0 0 0 70 47 35 0 0"></polygon>
+                    </svg>
+                  </div>
                 </div>
+                <div id="slideshow-pointers"></div>
               </div>
-              <a class="carousel-control-prev" href="#districts-carousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#districts-carousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div class="row justify-content-start">
-          <div class="col">
-            <h2 class="secondary-color">mobi li tà i interna</h2>
-            <p class="sibling-h2">
-              Il sistema di trasporti di Delirium copre la totale superficie della città (800 km²)
-            </p>
+        </section>
+        <section class="chamber-3">
+          <div class="row justify-content-start">
+            <div class="col">
+              <h2 class="secondary-color">mobi li tà i interna</h2>
+              <p class="sibling-h2">
+                Il sistema di trasporti di Delirium copre la totale superficie della città (800 km²)
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <picture>
-              <source srcset="/assets/img/mobile/delirium/mobile_delirium_mobilita_mappa.webp" type="image/webp" />
-              <img
-                src="/assets/img/mobile/delirium/mobile_delirium_mobilita_mappa.jpg"
-                alt="Illustrazione di una mappa topografica"
-                loading="lazy"
-              />
-            </picture>
+          <div class="row">
+            <div class="col-12">
+              <picture>
+                <source srcset="/assets/img/mobile/delirium/mobile_delirium_mappa.webp" type="image/webp" />
+                <img
+                  src="/assets/img/mobile/delirium/mobile_delirium_mappa.jpg"
+                  alt="Illustrazione di una mappa topografica"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-8 sheet-img">
-            <picture>
-              <source srcset="/assets/img/mobile/delirium/mobile_delirium_metropolitana.webp" type="image/webp" />
-              <img
-                src="/assets/img/mobile/delirium/mobile_delirium_metropolitana.jpg"
-                alt="Interno di un vagone della metropolina"
-                loading="lazy"
-              />
-            </picture>
+          <div class="row justify-content-center flex-nowrap">
+            <div class="col-9 sheet-img">
+              <picture>
+                <source srcset="/assets/img/mobile/delirium/mobile_delirium_metropolitana.webp" type="image/webp" />
+                <img
+                  src="/assets/img/mobile/delirium/mobile_delirium_metropolitana.jpg"
+                  alt="Interno di un vagone della metropolina"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="col-8 sheet-content">
+              <h2 class="secondary-color">metropolitana</h2>
+              <p class="sibling-h2">
+                La metropolitana è composta da 30 linee, che si intersecano con le stazioni ferroviarie.
+              </p>
+            </div>
           </div>
-          <div class="col-7 sheet-content">
-            <h2 class="secondary-color">metropolitana</h2>
-            <p class="sibling-h2">
-              La metropolitana è composta da 30 linee, che si intersecano con le stazioni ferroviarie.
-            </p>
+          <div class="row justify-content-center flex-nowrap">
+            <div class="col-8 sheet-content">
+              <h2 class="secondary-color">autostrada</h2>
+              <p class="sibling-h2">Circondando tutta l’area urbana in una circonvallazione senza limiti di velocità</p>
+            </div>
+            <div class="col-9 sheet-img">
+              <picture>
+                <source srcset="/assets/img/mobile/delirium/mobile_delirium_autostrada.webp" type="image/webp" />
+                <img
+                  src="/assets/img/mobile/delirium/mobile_delirium_autostrada.jpg"
+                  alt="Rete autostradale vista dall'alto"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
           </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-7 sheet-content">
-            <h2 class="secondary-color">autostrada</h2>
-            <p class="sibling-h2">Circondando tutta l’area urbana in una circonvallazione senza limiti di velocità</p>
+          <div class="row justify-content-center flex-nowrap">
+            <div class="col-9 sheet-img">
+              <picture>
+                <source srcset="/assets/img/mobile/delirium/mobile_delirium_ferrovia.webp" type="image/webp" />
+                <img
+                  src="/assets/img/mobile/delirium/mobile_delirium_ferrovia.jpg"
+                  alt="Stazione ferroviaria di notte"
+                  loading="lazy"
+                />
+              </picture>
+            </div>
+            <div class="col-8 sheet-content">
+              <h2 class="secondary-color">ferrovia</h2>
+              <p class="sibling-h2">
+                Le linee ferroviarie cittadine contano un totale di 20 linee distribuite in tutta la città
+              </p>
+            </div>
           </div>
-          <div class="col-8 sheet-img">
-            <picture>
-              <source srcset="/assets/img/mobile/delirium/mobile_delirium_autostrada.webp" type="image/webp" />
-              <img
-                src="/assets/img/mobile/delirium/mobile_delirium_autostrada.jpg"
-                alt="Rete autostradale vista dall'alto"
-                loading="lazy"
-              />
-            </picture>
+        </section>
+        <section class="chamber-4">
+          <div class="row justify-content-start">
+            <div class="col">
+              <h2 class="secondary-color">inum er i ut i l i</h2>
+            </div>
           </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-8 sheet-img">
-            <picture>
-              <source srcset="/assets/img/mobile/delirium/mobile_delirium_ferrovia.webp" type="image/webp" />
-              <img
-                src="/assets/img/mobile/delirium/mobile_delirium_ferrovia.jpg"
-                alt="Stazione ferroviaria di notte"
-                loading="lazy"
-              />
-            </picture>
+          <div class="row justify-content-around">
+            <div class="col-12">
+              <ul>
+                <li>polizia</li>
+                <li>milizia</li>
+                <li>ospedale</li>
+                <li>incendi</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-7 sheet-content">
-            <h2 class="secondary-color">ferrovia</h2>
-            <p class="sibling-h2">
-              Le linee ferroviarie cittadine contano un totale di 20 linee distribuite in tutta la città
-            </p>
+          <div class="row justify-content-center">
+            <div class="col">
+              <span class="stroke-neon secondary-color number">980 457814</span>
+            </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div class="row justify-content-start">
-          <div class="col">
-            <h2 class="secondary-color">inum er i ut i l i</h2>
+          <div class="row justify-content-center">
+            <div class="col">
+              <p>Unico numero telefonico per ogni <em>emergency</em></p>
+              <p>delirium.emergenze@delirium.it</p>
+            </div>
           </div>
-        </div>
-        <div class="row justify-content-around">
-          <div class="col-12">
-            <ul>
-              <li>polizia</li>
-              <li>milizia</li>
-              <li>ospedale</li>
-              <li>incendi</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col">
-            <span class="stroke-neon secondary-color number">980 457814</span>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col">
-            <p>Unico numero telefonico per ogni <em>emergency</em></p>
-            <p>delirium.emergenze@delirium.it</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <footer data-panel="seven">

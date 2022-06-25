@@ -131,11 +131,11 @@ function resizeCarousel() {
     if (window.innerWidth > 920) {
       carousel.style.height = String(`${carousel.offsetWidth * 0.7}px`);
     } else if (window.innerWidth <= 920 && window.innerWidth > 780) {
-      carousel.style.height = String(`${carousel.offsetWidth * 0.8}px`);
-    } else if (window.innerWidth <= 780 && window.innerWidth > 680) {
-      carousel.style.height = String(`${carousel.offsetWidth * 0.9}px`);
-    } else if (window.innerWidth <= 680) {
       carousel.style.height = String(`${carousel.offsetWidth * 1}px`);
+    } else if (window.innerWidth <= 780 && window.innerWidth > 680) {
+      carousel.style.height = String(`${carousel.offsetWidth * 0.8}px`);
+    } else if (window.innerWidth <= 680) {
+      carousel.style.height = String(`${carousel.offsetWidth * 0.7}px`);
     }
   }
 }

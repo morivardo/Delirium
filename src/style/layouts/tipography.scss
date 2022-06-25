@@ -405,7 +405,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
   html {
     font-size: 18px;
   }
@@ -433,5 +433,88 @@ p {
   .container-stroke-neon.container-primary-color .glow-layer,
   .container-stroke-neon.container-primary-color .stroke-neon {
     font-size: 1.35rem;
+  }
+
+  .sibling {
+    &-btn {
+      margin-bottom: calc(1.35rem + 1em);
+    }
+
+    &-h1 {
+      margin-bottom: calc(2rem + 0.5em);
+    }
+
+    &-h2 {
+      margin-top: 2rem;
+    }
+
+    &-h3 {
+      margin-top: 0.8rem;
+    }
+
+    &-h4 {
+      margin-top: 0.675rem;
+    }
+
+    &-input {
+      margin-bottom: calc(1.35rem + 0.5em);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1,
+  .container-h1 span {
+    font-size: 2.57rem;
+  }
+
+  h2,
+  .container-h2 span {
+    font-size: 1.57rem;
+  }
+
+  h3,
+  .container-h3 span {
+    font-size: 1rem;
+  }
+
+  h4,
+  .container-h4 span {
+    font-size: 1rem;
+  }
+
+  .container-stroke-neon.container-primary-color .glow-layer,
+  .container-stroke-neon.container-primary-color .stroke-neon {
+    font-size: 1rem;
+  }
+
+  .sibling {
+    &-btn {
+      margin-bottom: calc(1rem + 0.5em);
+    }
+
+    &-h1 {
+      margin-bottom: calc(1.5rem + 0.5em);
+    }
+
+    &-h2 {
+      margin-top: 1rem;
+    }
+
+    &-h3 {
+      margin-top: 0.8rem;
+    }
+
+    &-h4 {
+      margin-top: 0.7rem;
+    }
+
+    &-input {
+      margin-bottom: calc(1rem + 0.5em);
+    }
   }
 }
