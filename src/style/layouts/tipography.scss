@@ -212,7 +212,6 @@ body {
     text-decoration: none !important;
     text-transform: uppercase;
     transition: linear 0.3s;
-    z-index: 7;
     -webkit-font-smoothing: antialiased;
 
     &:hover {
@@ -375,7 +374,7 @@ p {
 
   p {
     position: relative;
-    z-index: 4;
+    z-index: 5;
   }
 }
 
@@ -479,7 +478,7 @@ p {
 
   h3,
   .container-h3 span {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   h4,
@@ -494,7 +493,7 @@ p {
 
   .sibling {
     &-btn {
-      margin-bottom: calc(1rem + 0.5em);
+      margin-bottom: calc(1rem + 1em);
     }
 
     &-h1 {
@@ -502,11 +501,11 @@ p {
     }
 
     &-h2 {
-      margin-top: 1rem;
+      margin-top: 1.57rem;
     }
 
     &-h3 {
-      margin-top: 0.8rem;
+      margin-top: 1rem;
     }
 
     &-h4 {

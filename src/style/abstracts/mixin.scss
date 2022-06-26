@@ -401,11 +401,11 @@
 
     & > .layer-1 {
       @if $hue == primary {
-        border: solid 0.64rem variables.$color-primary-beta;
+        border-top: solid 0.64rem variables.$color-primary-beta;
       } @else if $hue == secondary {
-        border: solid 0.64rem variables.$color-secondary-beta;
+        border-top: solid 0.64rem variables.$color-secondary-beta;
       } @else if $hue == tertiary {
-        border: solid 0.64rem variables.$color-tertiary-beta;
+        border-top: solid 0.64rem variables.$color-tertiary-beta;
       }
 
       filter: blur(4.47rem);
@@ -414,11 +414,11 @@
 
     & > .layer-2 {
       @if $hue == primary {
-        border: solid 0.83rem variables.$color-primary-alpha;
+        border-top: solid 0.83rem variables.$color-primary-alpha;
       } @else if $hue == secondary {
-        border: solid 0.83rem variables.$color-secondary-alpha;
+        border-top: solid 0.83rem variables.$color-secondary-alpha;
       } @else if $hue == tertiary {
-        border: solid 0.83rem variables.$color-tertiary-alpha;
+        border-top: solid 0.83rem variables.$color-tertiary-alpha;
       }
 
       filter: blur(1.49rem);
@@ -427,13 +427,13 @@
 
     & > .layer-3 {
       @if $hue == primary {
-        border: solid 0.64rem rgba(variables.$color-primary-epsilon, 20%);
+        border-top: solid 0.64rem rgba(variables.$color-primary-epsilon, 20%);
         box-shadow: 0 0 1.94rem variables.$color-primary-gamma, 0 0 0.6rem rgba(variables.$color-primary-delta, 70%);
       } @else if $hue == secondary {
-        border: solid 0.64rem rgba(variables.$color-secondary-epsilon, 20%);
+        border-top: solid 0.64rem rgba(variables.$color-secondary-epsilon, 20%);
         box-shadow: 0 0 1.94rem variables.$color-secondary-gamma, 0 0 0.6rem rgba(variables.$color-secondary-delta, 70%);
       } @else if $hue == tertiary {
-        border: solid 0.64rem rgba(variables.$color-tertiary-epsilon, 20%);
+        border-top: solid 0.64rem rgba(variables.$color-tertiary-epsilon, 20%);
         box-shadow: 0 0 1.94rem variables.$color-tertiary-gamma, 0 0 0.6rem rgba(variables.$color-tertiary-delta, 70%);
       }
 
@@ -446,11 +446,11 @@
 
     & > .layer-4 {
       @if $hue == primary {
-        border: solid 0.4rem variables.$color-primary-epsilon;
+        border-top: solid 0.4rem variables.$color-primary-epsilon;
       } @else if $hue == secondary {
-        border: solid 0.4rem variables.$color-secondary-epsilon;
+        border-top: solid 0.4rem variables.$color-secondary-epsilon;
       } @else if $hue == tertiary {
-        border: solid 0.4rem variables.$color-tertiary-epsilon;
+        border-top: solid 0.4rem variables.$color-tertiary-epsilon;
       }
 
       filter: blur(0.4rem);
@@ -459,11 +459,11 @@
 
     & > .layer-5 {
       @if $hue == primary {
-        border: solid 0.2rem #fff;
+        border-top: solid 0.2rem #fff;
       } @else if $hue == secondary {
-        border: solid 0.2rem #fff;
+        border-top: solid 0.2rem #fff;
       } @else if $hue == tertiary {
-        border: solid 0.2rem #fff;
+        border-top: solid 0.2rem #fff;
       }
 
       filter: blur(0.07rem);
@@ -591,6 +591,6 @@
   text-transform: uppercase;
   transform: translateY(-50%);
   transition: linear 0.3s;
-  z-index: 7;
+  z-index: 10;
   -webkit-font-smoothing: antialiased;
 }

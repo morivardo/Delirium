@@ -54,7 +54,6 @@
   }
 
   echo '  
-        console.log("porco dio");
         setTimeout(function () {
 
          if (window.innerWidth > 1200) {

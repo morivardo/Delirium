@@ -44,7 +44,7 @@ function optimizeImg() {
           interlaced: true,
         }),
         imagemin.mozjpeg({
-          quality: 80,
+          quality: 100,
           progressive: true,
         }),
         imagemin.optipng({
