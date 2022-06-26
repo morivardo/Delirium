@@ -49,7 +49,7 @@
               let doc = "traumehotel";';
       break;
     default:
-      require $request;
+      include $request;
       break;
   }
 

@@ -1,6 +1,9 @@
+/* eslint-disable one-var */
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
+
 const cacheHeight = window.innerHeight; // Needs for store the screen size and prevent scroll-resize in mobile devices
 const cacheWidth = window.innerWidth; // Needs for store the screen size and prevent scroll-resize in mobile devices
 
@@ -31,9 +34,9 @@ function horizontalScroll() {
 
   if (window.innerWidth > 1200) {
     scrollContainer[0].addEventListener('wheel', (evt) => {
-      evt.preventDefault();
-      scrollContainer[0].scrollLeft += evt.deltaY * 2;
-    });
+      scrollContainer[0].scrollLeft += (evt.deltaY)*3;
+    }, {passive:false});
+
   }
 }
 
