@@ -49,12 +49,11 @@
               let doc = "traumehotel";';
       break;
     default:
-      require $request;
+      include $request;
       break;
   }
 
   echo '  
-        console.log("porco dio");
         setTimeout(function () {
 
          if (window.innerWidth > 1200) {

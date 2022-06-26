@@ -1,0 +1,22 @@
+# docker-compose to run the app and set the project folder
+version: '3.8'
+services:
+
+  # php container with apache for web server
+  php-apache-environment:
+    hostname: delirium.com
+    container_name: php-apache
+
+    # build the php-apache image usintg the dockerfile to change configurations
+    build:
+      context: ./
+      dockerfile: Dockerfile
+
+    # folder from which docker takes the website files and php settings
+    volumes:
+      - ./public:/var/www/html/
+      - ./public/.htaccess:/var/www/html/.htaccess
+    
+    # port exposed to the local machine
+    ports:
+      - 8000:80
