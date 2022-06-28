@@ -23,8 +23,7 @@
 
     .slice-1 {
       .row {
-        height: 75vh;
-        margin: 17vh 0 8vh;
+        margin: 20% 0 10%;
 
         .col-6 {
           background-image: url('/assets/img/desktop/accesso/desktop_accesso_cambialatuavita_1.webp');
@@ -59,10 +58,8 @@
             }
 
             &::before {
-              height: calc(100% + 2rem + 2em);
-              margin-left: -1.5em;
-              margin-top: calc(-3rem + -1em);
-              width: calc(100% + 3em);
+              height: calc(100% + 3rem);
+              width: calc(100% + 3rem);
               z-index: 2;
             }
           }
@@ -89,21 +86,12 @@
           flex-direction: column;
           height: 100%;
           justify-content: flex-start;
-          margin-left: -5%;
+          margin: -10% 0 0 -5%;
           z-index: 4;
 
           .row {
             height: fit-content;
             margin: 0 0 -10%;
-
-            picture {
-              width: 100%;
-
-              img,
-              source {
-                width: 100%;
-              }
-            }
 
             &:nth-child(2) {
               z-index: 5;
@@ -119,143 +107,145 @@
         padding: 0 15% !important;
 
         .row-intro {
-          height: 7vh;
-          margin: 10vh 0 5vh;
+          margin: 10% 0 5%;
         }
 
         .form-container {
-          height: 70vh;
-          margin: 0 0 5vh;
+          margin-bottom: 5%;
 
-          .col-12 {
+          form {
+            display: flex;
+            flex-direction: column;
             height: 100%;
+            justify-content: space-between;
 
-            form {
-              display: flex;
-              flex-direction: column;
-              height: 100%;
-              justify-content: space-between;
+            .form-row:first-child {
+              .col-6 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
-              .form-row {
-                &:first-child {
-                  height: 80%;
+                #name-col {
+                  padding-right: 10%;
 
-                  .col-6 {
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-                    justify-content: space-between;
+                  label {
+                    margin-bottom: 0.75rem;
+                  }
+                }
 
-                    .row {
-                      &:first-child {
-                        #name-col {
-                          padding-right: 10%;
-                        }
+                #surname-col {
+                  padding-left: 10%;
 
-                        #surname-col {
-                          padding-left: 10%;
-                        }
-                      }
+                  label {
+                    margin-bottom: 0.75rem;
+                  }
+                }
 
-                      &:last-child {
-                        .form-check {
-                          .form-check-label {
-                            margin-left: 5rem;
-                          }
+                #email-col label {
+                  margin: 3.5rem 0 0.75rem;
+                }
 
-                          .container-check-neon {
-                            margin-left: 2rem;
-                          }
-                        }
-                      }
+                #letter-col {
+                  height: 100%;
 
-                      &:nth-child(3) {
-                        height: 34.7%;
+                  label {
+                    margin: 3.5rem 0 0.75rem;
+                  }
 
-                        #letter-col {
-                          height: 100%;
+                  .container-input-neon {
+                    height: 12.1rem;
+                    margin-top: -0.5rem;
 
-                          .container-input-neon {
-                            height: calc(100% - 0.5rem);
-                            margin-top: -0.5rem;
-
-                            input,
-                            span,
-                            textarea {
-                              height: 100%;
-                              top: 50%;
-                            }
-                          }
-                        }
-                      }
-                    }
-
-                    &:first-child {
-                      padding-right: 5%;
-                    }
-
-                    &:last-child {
-                      height: calc(100% - 1.5rem);
-                      padding-left: -5%;
-
-                      #avatar-row {
-                        height: 78% !important;
-
-                        #avatar-col {
-                          height: 100%;
-                          position: relative;
-
-                          #avatar-edit {
-                            left: 50%;
-                            position: absolute;
-                            top: 50%;
-
-                            input {
-                              display: none;
-                            }
-
-                            .container-btn-neon {
-                              label {
-                                cursor: pointer;
-                              }
-
-                              label,
-                              span {
-                                transform: translate(-50%, -50%) !important;
-                              }
-                            }
-                          }
-
-                          #avatar-preview {
-                            height: 100%;
-                            position: relative;
-                            width: 100%;
-
-                            #image-preview {
-                              background-image: url('/assets/img/desktop/accesso/desktop_accesso_registrazione.jpg');
-                              background-size: contain;
-                              background-repeat: no-repeat;
-                              background-position: center;
-                              height: 100%;
-                              width: 100%;
-                            }
-                          }
-                        }
-                      }
+                    input,
+                    span,
+                    textarea {
+                      height: 100%;
+                      top: 50%;
                     }
                   }
                 }
 
-                &:last-child {
-                  height: 7%;
-                  margin-top: calc(3vh + 3rem);
+                .form-check {
+                  margin-top: 3rem;
+
+                  .form-check-label {
+                    margin: 0 0 0 5rem;
+                  }
+
+                  .container-check-neon {
+                    margin-left: 2rem;
+                  }
                 }
 
-                &:nth-child(2) {
-                  height: 4%;
-                  margin-top: calc(3% + 1rem);
+                &:first-child {
+                  padding-right: 5%;
+                }
+
+                &:last-child {
+                  padding-left: -5%;
+
+                  label {
+                    margin-bottom: 0.75rem;
+                  }
+
+                  .row:last-child {
+                    margin-bottom: 1.5rem;
+                  }
+                }
+
+                #avatar-row {
+                  height: 78% !important;
+                }
+
+                #avatar-col {
+                  height: 100%;
+                  position: relative;
+                }
+
+                #avatar-edit {
+                  left: 50%;
+                  position: absolute;
+                  top: 50%;
+
+                  input {
+                    display: none;
+                  }
+
+                  .container-btn-neon {
+                    label {
+                      cursor: pointer;
+                    }
+
+                    label,
+                    span {
+                      transform: translate(-50%, -50%) !important;
+                    }
+                  }
+                }
+
+                #avatar-preview {
+                  height: 100%;
+                  position: relative;
+                  width: 100%;
+                }
+
+                #image-preview {
+                  background-image: url('/assets/img/desktop/accesso/desktop_accesso_registrazione.jpg');
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  height: 100%;
+                  width: 100%;
                 }
               }
+            }
+
+            .form-row:last-child {
+              margin-top: calc(5% + 3rem);
+            }
+
+            .form-row:nth-child(2) {
+              margin-top: calc(3% + 1rem);
             }
 
             .form-label {
@@ -270,7 +260,7 @@
 
     .slice-3 {
       .container-xl > .row {
-        margin: 10vh 0 7vh;
+        margin: 10% 0 7.5%;
 
         .sheet-content {
           padding-top: 2rem;
@@ -288,10 +278,8 @@
           }
 
           &::before {
-            height: calc(100% + 2rem + 2em);
-            margin-left: -1.5em;
-            margin-top: calc(-3rem + -1em);
-            width: calc(100% + 3em);
+            height: calc(100% + 3rem);
+            width: calc(100% + 3rem);
             z-index: 1;
           }
         }
@@ -318,18 +306,9 @@
           flex-direction: column;
           justify-content: center;
 
-          picture {
-            width: 100%;
-
-            img,
-            source {
-              width: 100%;
-            }
-          }
-
           .row {
             &:last-child {
-              margin: 4vh 0 0 15%;
+              margin: 5% 0 0 15%;
               width: 115%;
             }
 

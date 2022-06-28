@@ -2,13 +2,17 @@
 @use '../../abstracts/variables.scss';
 
 #t-traumehotel {
+  .container-lg {
+    background-image: url('/assets/img/tablet/traumehotel/tablet_traumehotel_background.svg');
+  }
+
   .intro {
     position: relative;
 
-    img,
-    picture,
-    source {
-      width: 100%;
+    picture {
+      display: block;
+      margin-left: -1.5rem;
+      width: calc(100% + 3rem);
     }
 
     .container-h1 {
@@ -28,26 +32,17 @@
   }
 
   .chamber-1 {
-    margin: 20% 0;
-
     .row:first-child {
-      .col-6:first-of-type {
-        @include mixin.glow-layering(frame, secondary);
-        position: relative;
-      }
-
       .glow-layer {
-        height: 105%;
-        margin: -5% 0 0 2%;
-        position: absolute;
-        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-42%, -58%);
       }
 
       img,
       picture,
       source {
         position: relative;
-        width: 100%;
         z-index: 10;
       }
     }
@@ -79,17 +74,12 @@
   }
 
   .chamber-2 {
-    margin: 20% 0;
-
     & > .row:nth-child(2) {
-      @include mixin.glow-layering(frame, tertiary);
       margin-top: calc(5% + 2rem);
       padding: 1.5rem;
-      position: relative;
 
       & > .glow-layer {
         height: calc(100% - 2rem);
-        position: absolute;
         width: calc(100% - 2rem);
       }
     }
@@ -121,8 +111,6 @@
   }
 
   .chamber-3 {
-    margin: 20% 0;
-
     img,
     picture,
     source {
@@ -191,8 +179,6 @@
   }
 
   .chamber-4 {
-    margin: 20% 0;
-
     img,
     picture,
     source {
@@ -216,17 +202,13 @@
     }
 
     & > .row:nth-child(2) {
-      @include mixin.glow-layering(frame, secondary);
       margin-top: calc(5% + 2rem);
-      position: relative;
 
       & > .glow-layer {
         height: 60%;
         left: 50%;
-        position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 100%;
       }
 
       .col-11 {
@@ -284,8 +266,6 @@
   }
 
   .chamber-5 {
-    margin: 30% 0;
-
     img,
     picture,
     source {

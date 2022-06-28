@@ -74,7 +74,7 @@ footer {
         li {
           margin: 1em 0;
 
-          .container-stroke-neon {
+          .container-footer-text {
             position: relative;
             width: fit-content;
 
@@ -132,7 +132,7 @@ footer {
 @media only screen and (max-width: 1200px) {
   footer {
     height: 6.5rem;
-    margin: 10% 0 0;
+    margin: 0;
     width: 100vw;
 
     .footer-layer {

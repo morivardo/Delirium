@@ -28,7 +28,6 @@ function minJs() {
     .pipe(
       terser({
         ecma: 2016,
-        compress: false,
       }),
     )
     .pipe(dest('public/assets/script'));
@@ -44,7 +43,7 @@ function optimizeImg() {
           interlaced: true,
         }),
         imagemin.mozjpeg({
-          quality: 100,
+          quality: 90,
           progressive: true,
         }),
         imagemin.optipng({
@@ -71,12 +70,12 @@ function webpImg() {
 }
 
 function copyToFront() {
-  const audio = src('src/audio/*.*').pipe(dest('public/assets/audio'));
-  const fonts = src('src/fonts/*/*.*').pipe(dest('public/assets/fonts'));
-  const gif = src('src/img/**/**/*.gif').pipe(dest('public/assets/img'));
-  // const panel_snap = src('node_modules/panelsnap/docs/panelsnap.js').pipe(dest('public/assets/script/modules'));
+  const audio = src('src/audio/*.*').pipe(changed('public/assets/audio')).pipe(dest('public/assets/audio'));
+  const bootstrap = src('node_modules/bootstrap/dist/js/bootstrap.min.js').pipe(dest('public/assets/script'));
+  const fonts = src('src/fonts/*/*.*').pipe(changed('public/assets/fonts')).pipe(dest('public/assets/fonts'));
+  const gif = src('src/img/**/**/*.gif').pipe(changed('public/assets/img')).pipe(dest('public/assets/img'));
 
-  return merge(audio, fonts, gif);
+  return merge(audio, bootstrap, fonts, gif);
 }
 
 // BrowserSync task
@@ -105,6 +104,7 @@ function watchTask() {
   watch(
     [
       'src/style/main.scss',
+      'src/style/bootstrap.scss',
       'src/style/layouts/**',
       'src/style/abstracts/**',
       'src/style/pages/desktop/**',

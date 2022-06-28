@@ -1,13 +1,15 @@
 #m-home {
+  .container-sm {
+    background-image: url('/assets/img/mobile/home/mobile_home_background.svg');
+  }
+
   .intro img {
     display: block;
-    margin-left: -15%;
-    width: 130%;
+    margin-left: -1.5rem;
+    width: calc(100% + 3rem);
   }
 
   .chamber-1 {
-    margin: 15% 0;
-
     .row:first-child .sheet-content {
       margin: -5% 0 0 -20%;
     }
@@ -39,14 +41,11 @@
   }
 
   .chamber-2 {
-    margin: 30% 0;
-
     .container-btn-neon:not(:last-child) {
       .btn-neon,
       .glow-layer {
         left: 50%;
         transform: translate(-50%, -50%);
-        width: fit-content;
       }
     }
 
@@ -94,8 +93,6 @@
   }
 
   .chamber-3 {
-    margin: calc(10% + 3.5rem) 0 30%;
-
     .row:nth-child(3) {
       margin: -5% 0 5%;
     }
