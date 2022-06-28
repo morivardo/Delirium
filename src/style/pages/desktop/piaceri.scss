@@ -24,22 +24,30 @@
 
   .slice-1 {
     .container-xl {
-      padding: 44vh 13vw !important;
+      .container-h2 {
+        width: 100%;
+
+        h2,
+        span {
+          left: 50%;
+          line-height: 1.5;
+          transform: translateX(-50%);
+          width: fit-content;
+        }
+      }
 
       p {
-        padding: 1.5rem 7.5vw 0;
+        margin-top: 4rem;
+        padding: 0 20%;
       }
     }
   }
 
   .slice-2 {
     .container-xl {
-      padding: 4.9vh 3.5vw !important;
-
       & > .row:first-child {
+        margin-bottom: 5%;
         .col-12 {
-          height: 46.9vh;
-
           div[class^='col'] {
             position: relative;
           }
@@ -51,8 +59,6 @@
       }
 
       & > .row:last-child {
-        height: 41.7vh;
-
         .row:first-child {
           margin-top: 10%;
           z-index: 5;
@@ -106,12 +112,6 @@
         transform: translate(-50%, -50%);
       }
     }
-  }
-
-  img,
-  picture,
-  source {
-    width: 100%;
   }
 
   .modal-dialog {
@@ -187,16 +187,16 @@
           height: 2.8rem;
           width: 2.8rem;
 
+          .btn-neon {
+            background: none;
+            height: 100%;
+            width: 100%;
+          }
+
           span {
             height: 100%;
             width: 100%;
           }
-        }
-
-        .btn-neon {
-          background: none;
-          height: 100%;
-          width: 100%;
         }
       }
 

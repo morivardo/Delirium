@@ -6,7 +6,7 @@ There are three ways to build and access to the Delirium website on your PC.
 
 You will need **Node.js** and **PHP 5.6** (or later) installed on your computer to use it.
 
-1. Open **'delirium' folder** in your terminal;
+1. Open **'delirium'** folder in your terminal;
 2. Run the **command `npm install`** to install dependencies;
 3. Run the **command `gulp server`** to start the application;
 

@@ -24,18 +24,18 @@
 
   .slice-1 {
     .row:first-child {
-      margin-top: 26vh;
       position: relative;
 
-      .col-4:first-of-type {
-        @include mixin.glow-layering(frame, secondary);
+      picture {
+        position: relative;
+        z-index: 10;
       }
 
       .glow-layer {
-        height: 101%;
-        margin-top: -1%;
-        position: absolute;
-        width: 33%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-42%, -55%);
+        width: 95%;
       }
 
       .col-4:last-of-type {
@@ -54,21 +54,10 @@
         z-index: 11;
       }
     }
-
-    img,
-    picture,
-    source {
-      position: relative;
-      width: 100%;
-      z-index: 10;
-    }
   }
 
   .slice-2 {
     .row:first-child {
-      height: 40vh;
-      margin-top: 10vh;
-
       .col-6:first-child {
         z-index: 0;
       }
@@ -97,8 +86,7 @@
 
     .row:last-child {
       flex-wrap: nowrap;
-      height: 35vh;
-      margin-top: 8vh;
+      margin-top: 7.5%;
 
       .col-9 {
         background: variables.$color-tertiary-icon-gamma;
@@ -138,8 +126,6 @@
   .slice-3 {
     .container-xl {
       .row:first-child {
-        margin-top: 33vh;
-
         .col {
           display: flex;
           justify-content: center;
@@ -191,18 +177,8 @@
       }
 
       .row:last-child {
-        @include mixin.glow-layering(frame, tertiary);
-
-        height: 40vh;
-        position: relative;
-
-        .glow-layer {
-          height: 100%;
-          position: absolute;
-          width: 100%;
-        }
-
         .col-2 {
+          margin: 12.5% 0 7.5%;
           padding: 0 1rem;
           text-align: center;
           z-index: 11;
@@ -252,8 +228,6 @@
   .slice-4 {
     .container-xl {
       .row:first-child {
-        margin-top: 20vh;
-
         .col {
           display: flex;
           justify-content: center;
@@ -312,20 +286,13 @@
       }
 
       .row:last-child {
-        @include mixin.glow-layering(frame, secondary);
-
-        height: 62vh;
-        position: relative;
-
         .glow-layer {
-          height: 100%;
-          position: absolute;
           width: 80%;
           transform: translateX(10%);
         }
 
         .col-4 {
-          margin-top: 5%;
+          margin: 10% 0 7.5%;
           z-index: 11;
         }
 
@@ -349,8 +316,6 @@
 
   .slice-5 {
     .row {
-      margin-top: 13vh;
-
       .col-5:first-child {
         .container-stroke-neon {
           .number,
@@ -397,35 +362,28 @@
   }
 
   .slice-6 {
-    .row {
-      margin-top: 21vh;
-
-      .col-4 {
-        .container-btn-neon {
-          .btn-neon,
-          span {
-            padding: 0 1.5rem;
-          }
-        }
-
-        .container-stroke-neon {
-          .number,
-          span {
-            font-size: 6rem;
-          }
-        }
-
-        .container-h2 {
-          margin-top: 5.75rem;
-        }
-
-        p {
-          margin-top: 7.5rem;
+    .col-4 {
+      margin-top: 10%;
+      .container-btn-neon {
+        .btn-neon,
+        span {
+          padding: 0 1.5rem;
         }
       }
 
-      .col-6 {
-        margin-top: -7.5%;
+      .container-stroke-neon {
+        .number,
+        span {
+          font-size: 6rem;
+        }
+      }
+
+      .container-h2 {
+        margin-top: 5.75rem;
+      }
+
+      p {
+        margin-top: 7.5rem;
       }
     }
   }

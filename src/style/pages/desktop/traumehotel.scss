@@ -24,18 +24,13 @@
 
   .slice-1 {
     .row:first-child {
-      margin-top: 26vh;
       position: relative;
 
-      .col-4:first-of-type {
-        @include mixin.glow-layering(frame, secondary);
-      }
-
       .glow-layer {
-        height: 101%;
+        left: 50%;
         margin-top: -1%;
-        position: absolute;
-        width: 33%;
+        top: 50%;
+        transform: translate(-42%, -58%);
       }
 
       .col-4:last-child {
@@ -59,7 +54,6 @@
     picture,
     source {
       position: relative;
-      width: 100%;
       z-index: 10;
     }
   }
@@ -67,24 +61,17 @@
   .slice-2 {
     .container-xl > .row:first-child {
       flex-wrap: nowrap;
-      margin-top: 14vh;
 
       .col-4 {
         margin: 7.5% -10% 0 0;
         padding: 0 0 0 -5%;
         z-index: 1;
       }
-
-      img,
-      picture,
-      source {
-        width: 100%;
-      }
     }
 
     .container-xl > .row:last-child {
       margin-top: -5%;
-      min-height: 32vh;
+      min-height: 35%;
 
       .col-3 {
         padding: 0;
@@ -110,8 +97,6 @@
   .slice-3 {
     .container-xl {
       .row:first-child {
-        margin-top: 33vh;
-
         .col {
           display: flex;
           justify-content: center;
@@ -163,18 +148,8 @@
       }
 
       .row:last-child {
-        @include mixin.glow-layering(frame, tertiary);
-
-        height: 40vh;
-        position: relative;
-
-        .glow-layer {
-          height: 100%;
-          position: absolute;
-          width: 100%;
-        }
-
         .col-2 {
+          margin: 12.5% 0 7.5%;
           padding: 0 1rem;
           text-align: center;
           z-index: 11;
@@ -224,8 +199,6 @@
   .slice-4 {
     .container-xl {
       .row:first-child {
-        margin-top: 20vh;
-
         .col {
           display: flex;
           justify-content: center;
@@ -284,30 +257,23 @@
       }
 
       .row:last-child {
-        @include mixin.glow-layering(frame, secondary);
-
-        height: 62vh;
-        position: relative;
-
         .glow-layer {
-          height: 100%;
-          position: absolute;
           width: 80%;
           transform: translateX(10%);
         }
 
         .col-4 {
-          margin-top: 5%;
+          margin: 12.5% 0 7.5%;
           z-index: 11;
         }
 
         .box {
           background-color: variables.$color-tertiary-icon-gamma;
           filter: drop-shadow(0.94rem 0.94rem 0.94rem rgba(#000, 30%));
-          margin: 0 10%;
-          padding: 3rem 4rem 1.5rem;
+          margin: 0 auto;
+          padding: 3rem 3.9rem 1.5rem;
           text-align: center;
-          width: 80%;
+          width: 85%;
           z-index: 12;
 
           h4 {
@@ -321,8 +287,6 @@
 
   .slice-5 {
     .container-xl > .row:first-child {
-      margin-top: 20vh;
-
       .col {
         display: flex;
         justify-content: center;
@@ -381,14 +345,7 @@
     }
 
     .container-xl > .row:last-child {
-      @include mixin.glow-layering(frame, secondary);
-
-      height: 62vh;
-      position: relative;
-
       .glow-layer {
-        height: 100%;
-        position: absolute;
         width: 80%;
         transform: translateX(10%);
       }
@@ -397,7 +354,7 @@
         background-color: variables.$color-tertiary-icon-gamma;
         filter: drop-shadow(0.94rem 0.94rem 0.94rem rgba(#000, 30%));
         height: 18rem;
-        margin-top: 7.5%;
+        margin: 12.5% 0 5%;
         padding: 5% 10%;
         text-align: center;
         z-index: 12;
@@ -414,14 +371,11 @@
           margin-left: -10%;
           width: 120%;
         }
-
-        .numbers {
-          font-family: variables.$font-body;
-          font-weight: bold;
-        }
       }
 
       p {
+        margin-bottom: 12.5%;
+        position: relative;
         text-align: center;
       }
     }
@@ -429,9 +383,7 @@
 
   .slice-6 {
     .row:first-child {
-      height: 13vh;
-      margin-top: 20vh;
-
+      margin-bottom: 15%;
       .col {
         display: flex;
         justify-content: center;
@@ -457,9 +409,9 @@
     }
 
     .row:last-child {
-      .col-4:last-child {
+      .col-6:last-child {
         height: 100%;
-        margin-left: -5%;
+        margin: 10% 0 0 -5%;
         padding-right: 5%;
 
         .btn-neon,
@@ -475,12 +427,6 @@
         p {
           position: relative;
         }
-      }
-
-      img,
-      picture,
-      source {
-        width: 100%;
       }
     }
   }

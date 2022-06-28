@@ -90,8 +90,7 @@ body {
   }
 
   input,
-  span,
-  textarea {
+  span {
     color: transparent;
     position: absolute;
     top: 0;
@@ -201,6 +200,60 @@ body {
 
   span {
     height: calc(3rem + 2px);
+  }
+}
+
+.container-footer-text {
+  position: relative;
+
+  .stroke-neon {
+    position: relative;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    transition: linear 0.3s;
+    -webkit-font-smoothing: antialiased;
+
+    &:hover {
+      color: transparent !important;
+    }
+  }
+
+  &.container-primary-color {
+    @include mixin.glow-layering(footer, primary);
+
+    .glow-layer {
+      color: transparent;
+      font-family: variables.$font-body;
+      font-size: 1.5rem;
+    }
+
+    .stroke-neon {
+      color: transparent;
+      font-family: variables.$font-body;
+      font-size: 1.5rem;
+      -webkit-text-stroke: 0.5px #fff;
+    }
+  }
+
+  &.container-secondary-color {
+    @include mixin.glow-layering(text, secondary);
+
+    .stroke-neon {
+      color: transparent;
+      position: absolute;
+      -webkit-text-stroke: 0.9px #fff;
+    }
+  }
+
+  &:not(.number):hover {
+    @include mixin.glow-layering(text, tertiary);
+  }
+
+  span[class^='layer'] {
+    color: transparent;
+    position: absolute;
+    top: 0;
+    transition: linear 0.3s;
   }
 }
 

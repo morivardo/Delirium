@@ -18,25 +18,18 @@ function animateBurger() {
   });
 }
 
-// Creates panels for effect  -  Disabled
-/*
-function createPanels() {
-  const panelSnapInstance = new PanelSnap({
-    panelSelector: '> #wrapper > .slice',
-    directionThreshold: 1,
-  });
-}
-*/
-
 // Allows horizontal scrolling with the mouse wheel
 function horizontalScroll() {
   const scrollContainer = document.getElementsByTagName('html');
 
   if (window.innerWidth > 1200) {
-    scrollContainer[0].addEventListener('wheel', (evt) => {
-      scrollContainer[0].scrollLeft += (evt.deltaY)*3;
-    }, {passive:false});
-
+    scrollContainer[0].addEventListener(
+      'wheel',
+      (evt) => {
+        scrollContainer[0].scrollLeft += evt.deltaY * 3;
+      },
+      { passive: false },
+    );
   }
 }
 
@@ -44,16 +37,16 @@ function horizontalScroll() {
 // Tag parameter must be a string
 function layering(tag, n) {
   const el = document.querySelectorAll(tag);
-  let names = tag;
-  if (names[0] === '.' || names[0] === '#') {
-    names = names.substring(1);
+  let name = tag;
+  if (name[0] === '.' || name[0] === '#') {
+    name = name.substring(1);
   }
 
   el.forEach((h) => {
     const s = [];
     const content = h.innerText.replace(/(\r\n|\n|\r)/gm, '');
     const div = document.createElement('div');
-    div.classList.add(`container-${names}`);
+    div.classList.add(`container-${name}`);
 
     if (h.classList.contains('primary-color')) {
       div.classList.add('container-primary-color');
@@ -74,7 +67,26 @@ function layering(tag, n) {
       s[i] = document.createElement('span');
       s[i].classList.add('glow-layer', `layer-${i}`);
       s[i].innerText = content;
+
+      if (h.classList.contains('title-btn')) s[i].classList.add('title-btn');
+
       div.append(s[i]);
+    }
+  });
+}
+
+// Creates the layers that form the neon effect of someone div frames
+// Frame parameter must be a string of a class name
+function frameLayering(frame, n) {
+  const div = [];
+  const el = document.querySelectorAll(`.${frame}`);
+
+  el.forEach((c) => {
+    for (let i = 0; i < n; i += 1) {
+      div[i] = document.createElement('div');
+      div[i].classList.add('glow-layer', `layer-${i}`);
+
+      c.append(div[i]);
     }
   });
 }
@@ -281,37 +293,16 @@ function slideshowConstructor() {
   }
 }
 
-// Makes the submenu dynamic and creates anchors between buttons and sections of the page
-function submenu() {
-  const subMenu = document.getElementById('submenu');
-  const subMenuItems = subMenu.querySelectorAll('#submenu .slice-anchor');
-
-  panelSnapInstance.on('activatePanel', (panel) => {
-    subMenuItems.forEach((subMenuEl) => subMenuEl.classList.remove('active'));
-
-    const panelName = panel.getAttribute('data-panel');
-    const subMenuObject = subMenu.querySelector(`.slice-anchor[data-panel=${panelName}]`);
-    subMenuObject.classList.add('active');
-  });
-
-  subMenuItems.forEach((subMenuEl) => {
-    subMenuEl.addEventListener('click', (e) => {
-      const panelName = e.target.getAttribute('data-panel');
-      const panel = document.querySelector(`.slice[data-panel=${panelName}]`);
-
-      panelSnapInstance.snapToPanel(panel);
-    });
-  });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   animateBurger();
+  frameLayering('container-neon-frame', 6);
   horizontalScroll();
   layering('h1', 6);
   layering('h2', 6);
   layering('h3', 6);
   layering('.btn-neon', 6);
   layering('.check-neon', 6);
+  layering('.footer-text', 6);
   layering('.hamburger', 6);
   layering('.input-neon', 6);
   layering('.neon-strip', 6);
