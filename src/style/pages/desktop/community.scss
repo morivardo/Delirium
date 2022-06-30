@@ -70,14 +70,13 @@
       justify-content: center;
 
       .row:last-child {
-        margin-top: calc(5% + 2rem);
+        margin-top: 3%;
       }
 
       #flags-container {
         display: grid;
         grid-template-columns: [c1] 5% [c2] 5% [c3] 5% [c4] 5% [c5] 5% [c6] 5% [c7] 5% [c8] 5% [c9] 5% [c10] 5% [c11] 5% [c12] 5% [c13] 5% [c14] 5% [c15] 5% [c16] 5% [c17] 5% [c18] 5% [c19];
         grid-template-rows: [r1] 10% [r2] 10% [r3] 10% [r4] 10% [r5] 10% [r6] 10% [r7] 10% [r8] 10% [r9] 10% [r10] 10% [r11];
-        height: 100%;
       }
 
       #flag-lg {
@@ -126,10 +125,8 @@
 
       .container-btn-neon {
         border-radius: 100%;
-        left: calc(50% - 3.35rem);
-        margin-top: 3.5rem;
+        margin-top: 2.5rem;
         overflow: visible;
-        position: absolute;
 
         span {
           border-radius: 100%;
@@ -208,12 +205,10 @@
         }
 
         &:nth-child(2) {
-          height: 35%;
           margin-top: -25%;
         }
 
         &:last-child {
-          height: 45%;
           margin-top: -5%;
 
           .col-9 {

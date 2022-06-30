@@ -271,14 +271,15 @@
           background-color: variables.$color-tertiary-icon-gamma;
           filter: drop-shadow(0.94rem 0.94rem 0.94rem rgba(#000, 30%));
           margin: 0 auto;
-          padding: 3rem 3.9rem 1.5rem;
+          padding: 3rem 3rem 1.5rem;
           text-align: center;
           width: 85%;
           z-index: 12;
 
           h4 {
-            margin-left: -10%;
-            width: 120%;
+            margin-left: -15%;
+            text-align: center;
+            width: 130%;
           }
         }
       }
@@ -370,6 +371,11 @@
         h4 {
           margin-left: -10%;
           width: 120%;
+        }
+
+        h4 + span {
+          font-size: 1.5rem;
+          text-transform: uppercase;
         }
       }
 

@@ -183,7 +183,7 @@ body {
     color: variables.$color-neutral-light;
     height: 3rem;
     position: absolute;
-    top: 0;
+    top: 50%;
     transform: translateY(-50%);
     transition: linear 0.3s;
     width: 100%;
@@ -192,7 +192,7 @@ body {
   span {
     color: transparent;
     position: absolute;
-    top: 0;
+    top: 50%;
     transform: translateY(-50%);
     transition: linear 0.3s;
     width: 100%;

@@ -25,7 +25,7 @@
   .slice-1 {
     .row {
       &:first-child {
-        margin-top: calc(10% + 3.5rem);
+        margin-top: 3rem;
       }
 
       &:nth-child(2) {
@@ -52,7 +52,6 @@
       }
 
       &:last-child {
-        margin-bottom: 6.25rem;
         padding: 0 5%;
       }
     }
@@ -80,7 +79,7 @@
       }
 
       .row:nth-child(2) {
-        margin-top: 15%;
+        margin-top: 12%;
       }
 
       .row:nth-child(3) {
@@ -114,19 +113,15 @@
   }
 
   .slice-3 {
-    & > .container-xl > .row {
-      margin-top: 20%;
+    .col-3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 0 2.5rem;
 
-      & > .col-3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 0 2.5rem;
-
-        .number > span {
-          font-size: 3rem;
-          margin-top: 1.5rem;
-        }
+      .number > span {
+        font-size: 3rem;
+        margin-top: 1.5rem;
       }
     }
 
@@ -188,7 +183,6 @@
     .container-xl {
       & > .row:first-child {
         flex-wrap: nowrap;
-        margin-top: 10%;
 
         .col-6:first-child {
           padding-right: 5%;
@@ -224,7 +218,6 @@
     .container-xl > .row {
       &:first-child {
         height: fit-content;
-        margin-top: 15%;
 
         .container-h2 {
           margin-bottom: 3rem;
@@ -253,21 +246,16 @@
           span,
           textarea {
             height: 100%;
+            transform: translateY(-50%);
             width: 100%;
-            transform: translateY(0%);
           }
         }
 
         .container-btn-neon {
-          margin-top: 1.5rem;
+          margin-top: 2rem;
 
           .btn-neon {
             background: none;
-          }
-
-          button,
-          span {
-            transform: translateY(0%);
           }
         }
 
@@ -276,14 +264,14 @@
           text-transform: uppercase;
 
           &:nth-of-type(2) {
-            margin-top: 1.5rem;
+            margin-top: 2rem;
           }
         }
       }
 
       &:nth-child(2) {
         min-height: 3rem;
-        margin: 10% 17.5% 1.5rem;
+        margin: 5% 17.5% 1.5rem;
 
         .col-3:last-child a,
         .col-3:last-child span {
