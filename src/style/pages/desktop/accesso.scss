@@ -19,6 +19,23 @@
           transform: translate(-50%, -50%) !important;
         }
       }
+
+      picture {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+
+      img,
+      source {
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     .slice-1 {

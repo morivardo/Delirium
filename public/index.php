@@ -53,17 +53,17 @@
       break;
   }
 
-  echo '  
-        setTimeout(function () {
-
-         if (window.innerWidth > 1200) {
+  echo ' 
+         if (window.innerWidth > 1200 && window.innerHeight > 750) {      // Desktop
             window.location.replace("/views/" + doc + "/" + doc + ".html");
-          } else if (window.innerWidth <= 1200 && window.innerWidth > 600) {
-            window.location.replace("/views/" + doc + "/t-" + doc + ".html");
-          } else if (window.innerWidth <= 600) {
+          } else if (window.innerWidth <= 600) {        // Mobile
             window.location.replace("/views/" + doc + "/m-" + doc + ".html");
-          }
-        }, 1000);
+          } else if ((window.innerWidth <= 1200 && window.innerWidth > 600 && window.innerHeight <= 750) ||
+          (window.innerWidth > 1200 && window.innerHeight <= 750) ||
+          (window.innerWidth <= 1200 && window.innerWidth > 600)
+          ) {   // Tablet
+            window.location.replace("/views/" + doc + "/t-" + doc + ".html");
+          } 
         </script>';
 
        // echo $request;

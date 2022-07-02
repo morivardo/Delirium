@@ -206,7 +206,7 @@ body {
 .container-footer-text {
   position: relative;
 
-  .stroke-neon {
+  .footer-text {
     position: relative;
     text-decoration: none !important;
     text-transform: uppercase;
@@ -227,21 +227,19 @@ body {
       font-size: 1.5rem;
     }
 
-    .stroke-neon {
+    .footer-text {
       color: transparent;
       font-family: variables.$font-body;
       font-size: 1.5rem;
-      -webkit-text-stroke: 0.5px #fff;
     }
   }
 
   &.container-secondary-color {
     @include mixin.glow-layering(text, secondary);
 
-    .stroke-neon {
+    .footer-text {
       color: transparent;
       position: absolute;
-      -webkit-text-stroke: 0.9px #fff;
     }
   }
 

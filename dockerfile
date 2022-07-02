@@ -1,7 +1,7 @@
 # dockerfile
 
 # Using PHP-apache docker image
-FROM php:8.0-apache
+FROM php:8.1-apache
 
 LABEL author="Riccardo Pastori <riccardo.pastori@tutanota.com>, Gruppetto Web (Bicocca)"
 

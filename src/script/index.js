@@ -22,11 +22,11 @@ function animateBurger() {
 function horizontalScroll() {
   const scrollContainer = document.getElementsByTagName('html');
 
-  if (window.innerWidth > 1200) {
+  if (window.innerWidth > 1200 && window.innerHeight > 750) {
     scrollContainer[0].addEventListener(
       'wheel',
       (evt) => {
-        scrollContainer[0].scrollLeft += evt.deltaY * 3;
+        scrollContainer[0].scrollLeft += evt.deltaY * 350;
       },
       { passive: false },
     );
@@ -182,13 +182,23 @@ function resizeRouting() {
   }
 
   const doc = pathing();
+  const desktop = '/views/' + doc + '/' + doc + '.html';
+  const mobile = '/views/' + doc + '/m-' + doc + '.html';
+  const tablet = '/views/' + doc + '/t-' + doc + '.html';
 
-  if (window.innerWidth > 1200) {
-    window.location.replace(`/views/${doc}/${doc}.html`);
-  } else if (window.innerWidth <= 1200 && window.innerWidth > 600) {
-    window.location.replace(`/views/${doc}/t-${doc}.html`);
+  if (window.innerWidth > 1200 && window.innerHeight > 750) {
+    // Desktop
+    if (window.location.pathname !== desktop) window.location.replace(desktop);
   } else if (window.innerWidth <= 600) {
-    window.location.replace(`/views/${doc}/m-${doc}.html`);
+    // Mobile
+    if (window.location.pathname !== mobile) window.location.replace(mobile);
+  } else if (
+    (window.innerWidth <= 1200 && window.innerWidth > 600 && window.innerHeight <= 750) ||
+    (window.innerWidth > 1200 && window.innerHeight <= 750) ||
+    (window.innerWidth <= 1200 && window.innerWidth > 600)
+  ) {
+    // Tablet
+    if (window.location.pathname !== tablet) window.location.replace(tablet);
   }
 }
 
