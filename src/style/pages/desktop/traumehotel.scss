@@ -60,10 +60,38 @@
     .row:last-child {
       margin-left: 2.5%;
 
-      h2,
-      span {
-        font-size: 3.875rem;
-        z-index: 11;
+      .container-h2 {
+        h2 {
+          font-size: 3.875rem;
+          z-index: 18;
+        }
+        span {
+          font-size: 3.875rem;
+        }
+
+        .layer-0 {
+          z-index: 12;
+        }
+
+        .layer-1 {
+          z-index: 13;
+        }
+
+        .layer-2 {
+          z-index: 14;
+        }
+
+        .layer-3 {
+          z-index: 15;
+        }
+
+        .layer-4 {
+          z-index: 16;
+        }
+
+        .layer-5 {
+          z-index: 17;
+        }
       }
     }
 
@@ -224,6 +252,31 @@
             span {
               font-size: 6rem;
               transform: translate(-50%, -50%);
+              z-index: 18;
+            }
+
+            .layer-0 {
+              z-index: 12;
+            }
+
+            .layer-1 {
+              z-index: 13;
+            }
+
+            .layer-2 {
+              z-index: 14;
+            }
+
+            .layer-3 {
+              z-index: 15;
+            }
+
+            .layer-4 {
+              z-index: 16;
+            }
+
+            .layer-5 {
+              z-index: 17;
             }
           }
 
@@ -313,6 +366,31 @@
           span {
             font-size: 6rem;
             transform: translate(-50%, -50%);
+            z-index: 18;
+          }
+
+          .layer-0 {
+            z-index: 12;
+          }
+
+          .layer-1 {
+            z-index: 13;
+          }
+
+          .layer-2 {
+            z-index: 14;
+          }
+
+          .layer-3 {
+            z-index: 15;
+          }
+
+          .layer-4 {
+            z-index: 16;
+          }
+
+          .layer-5 {
+            z-index: 17;
           }
         }
 

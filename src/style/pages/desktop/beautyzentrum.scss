@@ -58,22 +58,80 @@
       .col-4:last-of-type {
         margin-left: 10%;
         padding-top: 12.5%;
-        z-index: 10;
+        z-index: 11;
       }
     }
 
     .row:last-child {
       margin-left: 2.5%;
 
-      h2,
-      span {
-        font-size: 3.875rem;
-        z-index: 11;
+      .container-h2 {
+        h2 {
+          font-size: 3.875rem;
+          z-index: 18;
+        }
+        span {
+          font-size: 3.875rem;
+        }
+
+        .layer-0 {
+          z-index: 12;
+        }
+
+        .layer-1 {
+          z-index: 13;
+        }
+
+        .layer-2 {
+          z-index: 14;
+        }
+
+        .layer-3 {
+          z-index: 15;
+        }
+
+        .layer-4 {
+          z-index: 16;
+        }
+
+        .layer-5 {
+          z-index: 17;
+        }
       }
     }
   }
 
   .slice-2 {
+    .container-h2 {
+      h2 {
+        z-index: 18;
+      }
+
+      .layer-0 {
+        z-index: 12;
+      }
+
+      .layer-1 {
+        z-index: 13;
+      }
+
+      .layer-2 {
+        z-index: 14;
+      }
+
+      .layer-3 {
+        z-index: 15;
+      }
+
+      .layer-4 {
+        z-index: 16;
+      }
+
+      .layer-5 {
+        z-index: 17;
+      }
+    }
+
     .row:first-child {
       .col-6:first-child {
         z-index: 0;
@@ -92,9 +150,7 @@
             z-index: 2;
           }
 
-          h2,
-          p,
-          span {
+          p {
             z-index: 3;
           }
         }
@@ -118,9 +174,7 @@
             z-index: 2;
           }
 
-          h2,
-          p,
-          span {
+          p {
             z-index: 3;
           }
         }
@@ -253,6 +307,31 @@
             span {
               font-size: 6rem;
               transform: translate(-50%, -50%);
+              z-index: 18;
+            }
+
+            .layer-0 {
+              z-index: 12;
+            }
+
+            .layer-1 {
+              z-index: 13;
+            }
+
+            .layer-2 {
+              z-index: 14;
+            }
+
+            .layer-3 {
+              z-index: 15;
+            }
+
+            .layer-4 {
+              z-index: 16;
+            }
+
+            .layer-5 {
+              z-index: 17;
             }
           }
 

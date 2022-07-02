@@ -208,7 +208,10 @@ picture {
 }
 
 .container-neon-strip {
+  margin-left: -5vh;
+  max-width: none;
   position: relative;
+  width: 120vh;
 
   &.container-primary-color {
     @include mixin.glow-layering(strip, primary);
@@ -227,7 +230,7 @@ picture {
     bottom: 0;
     margin: 0 0 0 -10%;
     position: absolute;
-    width: 100vh;
+    width: 100%;
   }
 }
 

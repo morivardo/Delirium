@@ -228,6 +228,18 @@
       &:nth-child(4) {
         margin: 0;
         padding-bottom: 0.5rem;
+
+        .col-4 {
+          &:first-child {
+            padding: 0 1.13rem 0 0;
+          }
+          &:nth-child(2) {
+            padding: 0 0.6rem;
+          }
+          &:last-child {
+            padding: 0 0 0 1.13rem;
+          }
+        }
       }
 
       &:last-child {

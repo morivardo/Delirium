@@ -73,8 +73,10 @@
       span,
       textarea {
         height: 100%;
+        left: 50%;
         margin-bottom: 1.5rem;
-        transform: translateY(0);
+        top: 50%;
+        transform: translate(-50%, -50%);
       }
     }
 

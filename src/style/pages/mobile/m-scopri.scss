@@ -46,7 +46,7 @@
       margin-bottom: 25%;
 
       & > .glow-layer {
-        height: calc(115% + 2rem);
+        height: calc(130% + 2rem);
         margin: -7.5% 0 0 -10%;
       }
 
@@ -59,7 +59,7 @@
     }
 
     .row:first-child {
-      margin: 5% 0 calc(5% + 2rem);
+      margin: 5% 0 calc(7.5% + 2rem);
     }
 
     .container-stroke-neon span {
@@ -86,9 +86,35 @@
     .row:not(:first-child) {
       margin-bottom: 5%;
 
-      span {
-        font-size: 2.66rem;
-        transform: translate(10%, -90%);
+      .container-stroke-neon {
+        span {
+          font-size: 2.66rem;
+          transform: translate(10%, -90%);
+        }
+
+        .number {
+          z-index: 17;
+        }
+
+        .layer-0 {
+          z-index: 12;
+        }
+
+        .layer-1 {
+          z-index: 13;
+        }
+
+        .layer-3 {
+          z-index: 14;
+        }
+
+        .layer-4 {
+          z-index: 15;
+        }
+
+        .layer-5 {
+          z-index: 16;
+        }
       }
 
       &:last-child {
@@ -170,7 +196,9 @@
         span,
         textarea {
           height: 100%;
-          transform: translateY(0);
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
         }
       }
 
@@ -210,28 +238,44 @@
       }
 
       .col-1 {
-        border-left: solid 2px #fff;
+        background-color: variables.$color-neutral-light;
         align-items: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         height: calc(100% + 1rem);
+        justify-content: space-between;
         margin-top: calc(20% - 2rem);
         padding: 0;
-        width: 0;
+        width: 3px;
 
         .point {
           background-color: variables.$color-neutral-light;
+          clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
           content: '';
           display: block;
-          height: 0.75rem;
-          transform: rotate(45deg) translate(-1px, 1px);
-          width: 0.75rem;
+          height: 1rem;
+          width: 1rem;
           z-index: 1;
+        }
 
-          &.point {
-            margin: 1px 1px 0 0;
-          }
+        .point-1 {
+          transform: translateY(-50%);
+        }
+
+        .point-2 {
+          transform: translateY(-50%);
+        }
+
+        .point-3 {
+          transform: translateY(0);
+        }
+
+        .point-4 {
+          transform: translateY(50%);
+        }
+
+        .point-5 {
+          transform: translateY(50%);
         }
       }
 
@@ -247,6 +291,11 @@
         .container-btn-neon {
           margin-top: -1.5rem;
           width: 100%;
+
+          a,
+          span {
+            width: 100%;
+          }
         }
       }
     }
