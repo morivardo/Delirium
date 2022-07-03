@@ -154,10 +154,6 @@
 
       stroke-width: 1.6;
       z-index: 7;
-
-      &::before {
-        filter: drop-shadow(inset -0.01rem 0.02rem 0.01rem rgba(#fff, 50%));
-      }
     }
 
     .layer-4 {
@@ -457,10 +453,6 @@
 
       stroke-width: 1.1;
       z-index: 7;
-
-      &::before {
-        filter: drop-shadow(inset -0.02rem 0.02rem 0.01rem rgba(#fff, 50%));
-      }
     }
 
     .layer-4 {

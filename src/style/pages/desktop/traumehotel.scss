@@ -109,7 +109,7 @@
 
       .col-4 {
         margin: 7.5% -10% 0 0;
-        padding: 0 0 0 -5%;
+        padding: 0;
         z-index: 1;
       }
     }
@@ -341,15 +341,15 @@
           background-color: variables.$color-tertiary-icon-gamma;
           filter: drop-shadow(0.94rem 0.94rem 0.94rem rgba(#000, 30%));
           margin: 0 auto;
-          padding: 3rem 3rem 1.5rem;
+          padding: 3rem 3.3rem 1.5rem;
           text-align: center;
           width: 85%;
           z-index: 12;
 
           h4 {
-            margin-left: -15%;
+            margin-left: -20%;
             text-align: center;
-            width: 130%;
+            width: 140%;
           }
         }
       }

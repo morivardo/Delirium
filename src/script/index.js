@@ -101,8 +101,8 @@ function playAnthem() {
     const btn = document.getElementById('anthem-play-button');
     const anthem = document.getElementById('anthem');
     const obj = document.querySelectorAll('.icon-section-2');
-    const start = document.querySelectorAll('.from_play_to_pause');
-    const stop = document.querySelectorAll('.from_pause_to_play');
+    const start = document.querySelectorAll('animate[from="M 18 10 L 90 49 L 18 90"]'); // Seleziona l'animazione per i vettori in forma di play
+    const stop = document.querySelectorAll('animate[from="M 82 10 L 82 49 L 82 90"]'); // Seleziona l'animazione per i vettori in forma di pause
 
     btn.addEventListener('click', () => {
       if (playing === false) {
