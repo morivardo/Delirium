@@ -18,15 +18,103 @@ function animateBurger() {
   });
 }
 
-// Allows horizontal scrolling with the mouse wheel
+/* Allows horizontal scrolling with the mouse wheel
+
+The scrolling distance changes depending on both the browser used and the OS used.
+It would be necessary to normalize the scrolling distance delta.
+In this case, we adjusted the delta based on the browser and OS used.
+We included a table with the deltas found with different configurations.
+
+    OS     |   Browser  | Delta mouse | Delta trackpad
+-------------------------------------------------------
+    OSX    |   Chrome   |      26     |       2
+-------------------------------------------------------
+    OSX    |   Firefox  |      13     |       1
+-------------------------------------------------------
+    OSX    |   Safari   |      13     |       1
+-------------------------------------------------------
+    Win    |   Chrome   |     100     |       6.66
+-------------------------------------------------------
+    Win    |   Firefox  |     102     |       3.4
+-------------------------------------------------------
+Ubuntu (VM)|   Chrome   |      53     |       53
+-------------------------------------------------------
+Ubuntu (VM)|  Epiphany  |     114     |       114
+-------------------------------------------------------
+Ubuntu (VM)|   Firefox  |      40     |       40
+-------------------------------------------------------
+
+*/
+
 function horizontalScroll() {
   const scrollContainer = document.getElementsByTagName('html');
+  const userAgent = navigator.userAgent;
+  const user = {
+    browser: '',
+    os: '',
+  };
+
+  // Check browser-engine of the client
+  if (userAgent.includes('Chrome/')) user.browser = 'blink';
+  else if (userAgent.includes('AppleWebKit/') && !userAgent.includes('Chrome/')) user.browser = 'webkit';
+  else if (userAgent.includes('Gecko/')) user.browser = 'gecko';
+  else user.browser = 'others';
+
+  // Check Operating System of user
+  if (userAgent.includes('Mac')) user.os = 'osx';
+  else if (userAgent.includes('Windows')) user.os = 'win';
+  else if (userAgent.includes('Linux')) user.os = 'lin';
+  else user.os = 'others';
 
   if (window.innerWidth > 1200 && window.innerHeight > 750) {
     scrollContainer[0].addEventListener(
       'wheel',
       (evt) => {
-        scrollContainer[0].scrollLeft += evt.deltaY * 350;
+        const deltaY = evt.deltaY * 5;
+        switch (true) {
+          // OSX
+          case user.browser === 'blink' && user.os === 'osx':
+            if (evt.deltaY / 26 < 1) scrollContainer[0].scrollLeft += deltaY * 26 * 3;
+            else scrollContainer[0].scrollLeft += deltaY;
+            break;
+          case user.browser === 'gecko' && user.os === 'osx':
+            if (evt.deltaY / 13 < 1) scrollContainer[0].scrollLeft += deltaY * 13;
+            else scrollContainer[0].scrollLeft += deltaY;
+            break;
+          case user.browser === 'webkit' && user.os === 'osx':
+            if (evt.deltaY / 13 < 1) scrollContainer[0].scrollLeft += deltaY * 13;
+            else scrollContainer[0].scrollLeft += deltaY;
+            break;
+
+          // Win
+          case user.browser === 'blink' && user.os === 'win':
+            if (evt.deltaY / 100 < 1) scrollContainer[0].scrollLeft += deltaY * 100;
+            else scrollContainer[0].scrollLeft += deltaY;
+            break;
+          case user.browser === 'gecko' && user.os === 'win':
+            if (evt.deltaY / 102 < 1) scrollContainer[0].scrollLeft += deltaY * 102;
+            else scrollContainer[0].scrollLeft += deltaY;
+            break;
+
+          // Linux
+          case user.browser === 'blink' && user.os === 'lin':
+            if (evt.deltaY / 53 < 1) scrollContainer[0].scrollLeft += deltaY * 53;
+            else scrollContainer[0].scrollLeft += deltaY;
+            break;
+          case user.browser === 'gecko' && user.os === 'lin':
+            if (evt.deltaY / 40 < 1) scrollContainer[0].scrollLeft += deltaY * 40;
+            else scrollContainer[0].scrollLeft += deltaY;
+            break;
+          case user.browser === 'webkit' && user.os === 'lin':
+            if (evt.deltaY / 114 < 1) scrollContainer[0].scrollLeft += deltaY * 114;
+            else scrollContainer[0].scrollLeft += deltaY;
+            break;
+
+          // Default
+          default:
+            scrollContainer[0].scrollLeft += deltaY;
+            break;
+        }
       },
       { passive: false },
     );
@@ -101,8 +189,8 @@ function playAnthem() {
     const btn = document.getElementById('anthem-play-button');
     const anthem = document.getElementById('anthem');
     const obj = document.querySelectorAll('.icon-section-2');
-    const start = document.querySelectorAll('animate[from="M 18 10 L 90 49 L 18 90"]'); // Seleziona l'animazione per i vettori in forma di play
-    const stop = document.querySelectorAll('animate[from="M 82 10 L 82 49 L 82 90"]'); // Seleziona l'animazione per i vettori in forma di pause
+    const start = document.querySelectorAll('animate[from="M 18 10 L 90 49 L 18 90"]'); // Select animation for play vector
+    const stop = document.querySelectorAll('animate[from="M 82 10 L 82 49 L 82 90"]'); // SSelect animation for pause vector
 
     btn.addEventListener('click', () => {
       if (playing === false) {
@@ -182,9 +270,9 @@ function resizeRouting() {
   }
 
   const doc = pathing();
-  const desktop = '/views/' + doc + '/' + doc + '.html';
-  const mobile = '/views/' + doc + '/m-' + doc + '.html';
-  const tablet = '/views/' + doc + '/t-' + doc + '.html';
+  const desktop = `/views/${doc}/${doc}.html`;
+  const mobile = `/views/${doc}/m-${doc}.html`;
+  const tablet = `/views/${doc}/t-${doc}.html`;
 
   if (window.innerWidth > 1200 && window.innerHeight > 750) {
     // Desktop
