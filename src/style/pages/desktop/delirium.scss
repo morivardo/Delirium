@@ -222,6 +222,11 @@
             transform: translateX(-50%);
             width: max-content;
           }
+
+          .layer-4 {
+            text-shadow: 0 0 0 rgba(#fff, 50%), 0 0 0 variables.$color-secondary-gamma,
+              0 0 0 rgba(variables.$color-secondary-delta, 70%);
+          }
         }
       }
 
