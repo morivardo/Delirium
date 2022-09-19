@@ -120,15 +120,8 @@ function watchTask() {
 }
 
 // Default Gulp task
-exports.default = series(
-  copyToFront,
-  compileScss,
-  minJs,
-  optimizeImg,
-  webpImg,
-  startServer,
-  browserSyncServe,
-  watchTask,
-);
+exports.default = series(copyToFront, compileScss, minJs, optimizeImg, webpImg);
 
 exports.server = startServer;
+exports.browser = browserSyncServe;
+exports.watch = watchTask;
