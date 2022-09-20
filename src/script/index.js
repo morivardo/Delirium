@@ -7,6 +7,30 @@
 const cacheHeight = window.innerHeight; // Needs for store the screen size and prevent scroll-resize in mobile devices
 const cacheWidth = window.innerWidth; // Needs for store the screen size and prevent scroll-resize in mobile devices
 
+/* These variables are needed for differentiating parameters depending on the
+browser-os configuration used by the user.
+In fact, rendering does not start the same way on all browsers.
+It is necessary to change parameters such as size multipliers, etc.
+*/
+
+const userAgent = navigator.userAgent;
+const user = {
+  browser: '',
+  os: '',
+};
+
+// Check browser-engine of the client
+if (userAgent.includes('Chrome/')) user.browser = 'blink';
+else if (userAgent.includes('AppleWebKit/') && !userAgent.includes('Chrome/')) user.browser = 'webkit';
+else if (userAgent.includes('Gecko/')) user.browser = 'gecko';
+else user.browser = 'others';
+
+// Check Operating System of user
+if (userAgent.includes('Mac')) user.os = 'osx';
+else if (userAgent.includes('Windows')) user.os = 'win';
+else if (userAgent.includes('Linux')) user.os = 'lin';
+else user.os = 'others';
+
 // Create animation for the hamburger menu
 function animateBurger() {
   const menuToggle = document.getElementById('menu-toggle');
@@ -48,23 +72,6 @@ Ubuntu (VM)|   Firefox  |      40     |       40
 
 function horizontalScroll() {
   const scrollContainer = document.getElementsByTagName('html');
-  const userAgent = navigator.userAgent;
-  const user = {
-    browser: '',
-    os: '',
-  };
-
-  // Check browser-engine of the client
-  if (userAgent.includes('Chrome/')) user.browser = 'blink';
-  else if (userAgent.includes('AppleWebKit/') && !userAgent.includes('Chrome/')) user.browser = 'webkit';
-  else if (userAgent.includes('Gecko/')) user.browser = 'gecko';
-  else user.browser = 'others';
-
-  // Check Operating System of user
-  if (userAgent.includes('Mac')) user.os = 'osx';
-  else if (userAgent.includes('Windows')) user.os = 'win';
-  else if (userAgent.includes('Linux')) user.os = 'lin';
-  else user.os = 'others';
 
   if (window.innerWidth > 1200 && window.innerHeight > 750) {
     scrollContainer[0].addEventListener(
@@ -234,10 +241,36 @@ function resizeCarousel() {
     if (window.innerWidth > 920) {
       carousel.style.height = String(`${carousel.offsetWidth * 0.7}px`);
     } else if (window.innerWidth <= 920 && window.innerWidth > 780) {
-      carousel.style.height = String(`${carousel.offsetWidth * 1}px`);
-    } else if (window.innerWidth <= 780 && window.innerWidth > 680) {
-      carousel.style.height = String(`${carousel.offsetWidth * 0.8}px`);
-    } else if (window.innerWidth <= 680) {
+      switch (user.browser) {
+        case 'blink':
+          carousel.style.height = String(`${carousel.offsetWidth * 0.7}px`);
+          break;
+        case 'gecko':
+          carousel.style.height = String(`${carousel.offsetWidth * 0.8}px`);
+          break;
+        case 'webkit':
+          carousel.style.height = String(`${carousel.offsetWidth * 0.8}px`);
+          break;
+        default:
+          carousel.style.height = String(`${carousel.offsetWidth * 0.7}px`);
+          break;
+      }
+    } else if (window.innerWidth <= 780 && window.innerWidth > 630) {
+      switch (user.browser) {
+        case 'blink':
+          carousel.style.height = String(`${carousel.offsetWidth * 0.7}px`);
+          break;
+        case 'gecko':
+          carousel.style.height = String(`${carousel.offsetWidth * 0.8}px`);
+          break;
+        case 'webkit':
+          carousel.style.height = String(`${carousel.offsetWidth * 0.8}px`);
+          break;
+        default:
+          carousel.style.height = String(`${carousel.offsetWidth * 0.7}px`);
+          break;
+      }
+    } else if (window.innerWidth <= 630) {
       carousel.style.height = String(`${carousel.offsetWidth * 0.7}px`);
     }
   }

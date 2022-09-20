@@ -125,3 +125,4 @@ exports.default = series(copyToFront, compileScss, minJs, optimizeImg, webpImg);
 exports.server = startServer;
 exports.browser = browserSyncServe;
 exports.watch = watchTask;
+exports.js = minJs;
